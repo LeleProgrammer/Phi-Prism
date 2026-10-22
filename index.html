@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#101216">
+  <meta name="description" content="Phi Prism：浏览器内读取 Phigros 成绩，查询 Best N、分析推分并导出高清成绩图。">
+  <meta name="referrer" content="no-referrer">
+  <title>Phi Prism · Phigros 查分器</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/style.css">
+  <script defer src="assets/vendor/fflate.js"></script>
+  <script defer src="assets/vendor/crypto-js.js"></script>
+  <script defer src="assets/data.js"></script>
+  <script defer src="assets/art.js"></script>
+  <script defer src="assets/core.js"></script>
+  <script defer src="assets/export.js"></script>
+  <script defer src="assets/app.js"></script>
+</head>
+<body>
+  <svg class="svg-defs" aria-hidden="true"><defs>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12m-5-5 5 5 5-5M4 16v4h16v-4"/></symbol>
+    <symbol id="i-upload" viewBox="0 0 24 24"><path d="M12 16V4m-5 5 5-5 5 5M4 16v4h16v-4"/></symbol>
+    <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M20 8a8 8 0 1 0 0 8M20 3v5h-5"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></symbol>
+    <symbol id="i-settings" viewBox="0 0 24 24"><path d="M4 7h16M4 17h16"/><circle cx="9" cy="7" r="3"/><circle cx="15" cy="17" r="3"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 3v17h17M8 15l4-5 4 3 5-8"/></symbol>
+    <symbol id="i-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9 9a3 3 0 1 1 4 3c-1 .5-1 1-1 2m0 2v1"/></symbol>
+  </defs></svg>
+  <header class="topbar">
+    <a class="brand" href="#best" aria-label="Phi Prism 主页"><span class="brand-mark">φ</span><span>PHI <b>PRISM</b><small>PHIGROS SCORE VIEWER</small></span></a>
+    <nav aria-label="主导航">
+      <button class="nav active" data-view="best">成绩总览</button><button class="nav" data-view="library">单曲查询</button><button class="nav" data-view="stats">数据统计</button><button class="nav" data-view="suggest">推分计划</button><button class="nav" data-view="history">同步历史</button>
+    </nav>
+    <div class="header-actions"><button class="icon-btn" id="helpBtn" aria-label="使用说明"><svg><use href="#i-help"/></svg></button><button class="btn small" id="connectBtn"><span class="status-dot"></span><span id="connectText">连接存档</span></button></div>
+  </header>
+  <main>
+    <section class="hero" id="hero">
+      <div class="hero-lines" aria-hidden="true"></div>
+      <div class="hero-top"><span class="eyebrow">YOUR RHYTHM. YOUR RECORD.</span><span class="source-tag" id="sourceTag">尚未载入存档</span></div>
+      <div class="hero-body"><div class="identity"><div class="avatar" id="avatar">φ</div><div><div class="profile-label">PLAYER PROFILE <span id="challenge"></span></div><h1 id="playerName">每一道判定线，<br>都是新的可能。</h1><p id="playerIntro">连接你的存档，让每一次进步被看见。</p></div></div>
+        <div class="hero-rks"><span>RANKING SCORE <i id="rksType">B30</i></span><strong id="heroRks">--<em>.----</em></strong><div id="cloudRks">在浏览器中读取 · 统计 · 生成成绩图</div></div>
+      </div>
+      <div class="hero-bottom"><span id="syncTime">纯静态 · 无需服务器 · 免费使用</span><div><button class="text-btn" id="syncBtn"><svg><use href="#i-refresh"/></svg>更新存档</button><button class="btn primary" id="heroExport"><svg><use href="#i-download"/></svg>生成成绩图</button></div></div>
+    </section>
+    <section class="onboarding" id="onboarding">
+      <div><span class="eyebrow accent">START YOUR SESSION</span><h2>你的成绩，值得一张好看的图。</h2><p>使用 sessionToken 读取云存档，或导入本地 ZIP / JSON。<br>统计与出图均在你的浏览器内完成。</p></div>
+      <div class="onboard-actions"><button class="btn primary" id="startConnect">连接云存档 <svg><use href="#i-arrow"/></svg></button><button class="btn" id="startImport"><svg><use href="#i-upload"/></svg>导入成绩</button><button class="text-btn" id="demoBtn">先体验演示成绩 <span>↗</span></button></div>
+      <span class="onboard-watermark" aria-hidden="true">φ</span>
+    </section>
+    <section class="metrics" id="metrics" hidden></section>
+    <section class="workspace" id="workspace" hidden>
+      <div class="section-heading"><div><span class="eyebrow" id="viewEyebrow">PERSONAL BEST</span><h2 id="viewTitle">我的最佳成绩</h2></div><div class="workspace-actions"><button class="btn small" id="importBtn"><svg><use href="#i-upload"/></svg>导入</button><button class="btn small" id="jsonBtn">导出 JSON</button><button class="btn primary small" id="exportBtn"><svg><use href="#i-download"/></svg>导出图片</button></div></div>
+      <div id="content"></div>
+    </section>
+    <p class="data-note" id="dataNote"></p>
+  </main>
+  <footer><div><span class="footer-mark">φ</span> PHI PRISM <span class="muted">/</span> <span>让每一次进步被看见。</span></div><span>非官方 Phigros 成绩工具 · <button class="text-link" id="aboutBtn">数据与说明</button></span></footer>
+  <input id="importFile" type="file" accept=".json,.zip,application/json,application/zip" hidden>
+  <input id="backgroundFile" type="file" accept="image/png,image/jpeg,image/webp" hidden>
+  <input id="avatarFile" type="file" accept="image/png,image/jpeg,image/webp" hidden>
+  <dialog id="connectDialog" class="dialog connect-dialog">
+    <div class="dialog-header"><div><span class="eyebrow">CONNECT YOUR SAVE</span><h2>连接你的云存档</h2></div><button class="icon-btn" data-close aria-label="关闭"><svg><use href="#i-close"/></svg></button></div>
+    <p class="muted">输入 TapTap 国内云存档的 sessionToken。仅向游戏云存档接口发送，用于读取成绩。</p>
+    <form id="connectForm"><label for="token">sessionToken</label><div class="token-field"><input id="token" type="password" autocomplete="off" spellcheck="false" maxlength="25" placeholder="25 位英文字母与数字" required pattern="[a-zA-Z0-9]{25}"><button type="button" class="text-btn" id="toggleToken">显示</button></div><label class="check"><input type="checkbox" id="rememberToken">在此浏览器记住 token（共用设备请勿勾选）</label><button class="btn primary full" type="submit" id="submitConnect">读取云存档 <svg><use href="#i-arrow"/></svg></button></form>
+    <p id="connectStatus" class="status-message" role="status"></p><p id="downloadFallback" hidden><a id="saveDownload" target="_blank" rel="noopener noreferrer">下载原始存档 ZIP ↗</a>，保存后 <button class="text-link" id="fallbackImport">导入本站</button>。</p>
+    <div class="dialog-divider"></div><div class="connect-alternatives"><button class="btn" id="dialogImport"><svg><use href="#i-upload"/></svg>导入 ZIP / JSON</button><button class="text-btn danger" id="forgetBtn">清除已保存的 token</button></div>
+    <details><summary>如何获取 sessionToken？</summary><p>如果你已在可信的查分工具中完成 TapTap 授权，可使用该工具提供的“导出 sessionToken”功能。也可从自己设备上的游戏账户文件提取，具体路径随系统而异。本工具不要求 TapTap 密码，也不提供公共代理。</p><p>sessionToken 是账户凭证，请只在你信任的网站使用，勿放进公开仓库或聊天截图。只有游戏内已上传的云存档才能在线查询。</p></details>
+  </dialog>
+  <dialog id="songDialog" class="dialog song-dialog"><div id="songContent"></div></dialog>
+  <dialog id="exportDialog" class="dialog export-dialog">
+    <div class="dialog-header"><div><span class="eyebrow">RECORDS INTO ART</span><h2>制作你的成绩图</h2></div><button class="icon-btn" data-close aria-label="关闭"><svg><use href="#i-close"/></svg></button></div>
+    <div class="export-layout"><form id="exportForm" class="export-options">
+      <label>图片内容<select id="exportType"><option value="best">Best N 成绩图</option><option value="song">单曲成绩图</option><option value="stats">个人统计图</option><option value="suggest">推分计划图</option></select></label>
+      <div class="two-col"><label>版式<select id="exportLayout"><option value="portrait">竖版 · 3 列</option><option value="landscape">横版 · 5 列</option></select></label><label>格式<select id="exportFormat"><option value="png">PNG · 无损</option><option value="jpeg">JPG · 小体积</option></select></label></div>
+      <div class="two-col"><label>分辨率<select id="exportScale"><option value="1">标准</option><option value="1.5" selected>高清 · 1.5 倍</option><option value="2">超清 · 2 倍</option></select></label><label>主题色<input id="exportColor" type="color" value="#f1df8b"></label></div>
+      <label>背景曲绘<select id="exportBackground"></select></label><button type="button" class="btn small full" id="customBgBtn">上传自定义背景</button>
+      <label>背景亮度<input id="exportBrightness" type="range" min="8" max="45" value="20"></label>
+      <label>自定义昵称<input id="exportName" maxlength="40" placeholder="默认使用玩家昵称"></label><label>签名<input id="exportSignature" maxlength="80" placeholder="每一道判定线，都是新的可能。"></label>
+      <label class="check"><input type="checkbox" id="exportIdentity" checked>显示昵称与头像</label><button type="button" class="text-btn" id="customAvatarBtn">上传自定义头像 ↗</button>
+      <label class="check"><input type="checkbox" id="exportHints" checked>显示推分提示</label><label class="check"><input type="checkbox" id="exportOverflow" checked>显示候补成绩（Overflow）</label><label class="check"><input type="checkbox" id="exportWatermark" checked>显示 Phi Prism 水印</label>
+      <label>文件名<input id="exportFilename" placeholder="自动生成文件名" maxlength="80"></label>
+      <button class="btn primary full" type="submit" id="renderBtn"><svg><use href="#i-refresh"/></svg>更新预览</button>
+    </form><div class="export-preview"><div class="preview-heading"><span>IMAGE PREVIEW</span><span id="imageSize">等待生成</span></div><div id="canvasWrap"><p class="muted">正在生成预览…</p></div><p id="exportStatus" role="status"></p><div class="preview-actions"><button class="btn" id="copyImage">复制图片</button><button class="btn primary" id="downloadImage"><svg><use href="#i-download"/></svg>下载图片</button></div></div></div>
+  </dialog>
+  <dialog id="helpDialog" class="dialog help-dialog"><div class="dialog-header"><div><span class="eyebrow">ABOUT PHI PRISM</span><h2>使用与数据说明</h2></div><button class="icon-btn" data-close aria-label="关闭"><svg><use href="#i-close"/></svg></button></div><div id="helpContent"></div></dialog>
+  <div class="toast" id="toast" role="status" hidden></div>
+</body>
+</html>

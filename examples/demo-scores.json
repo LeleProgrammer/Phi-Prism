@@ -1,0 +1,4812 @@
+{
+  "schema": "phi-prism/1",
+  "exportedAt": "2026-10-21T14:11:13.294Z",
+  "dataDate": "2026-10-21",
+  "demo": true,
+  "profile": {
+    "name": "PRISM / 演示玩家",
+    "account": "__demo__",
+    "intro": "每一道判定线，都是新的可能。",
+    "avatar": "",
+    "background": "",
+    "challenge": 345,
+    "gameVersion": "",
+    "cloudRks": null,
+    "updatedAt": "2026-10-21T14:11:12.618Z",
+    "money": null
+  },
+  "records": [
+    {
+      "id": "Glaciaxion.SunsetRay",
+      "level": "IN",
+      "score": 976328,
+      "acc": 98.86,
+      "fc": false,
+      "constant": 12.6
+    },
+    {
+      "id": "EradicationCatastrophe.NceS",
+      "level": "EZ",
+      "score": 1000000,
+      "acc": 100,
+      "fc": true,
+      "constant": 3.5
+    },
+    {
+      "id": "EradicationCatastrophe.NceS",
+      "level": "IN",
+      "score": 961113,
+      "acc": 96.57,
+      "fc": false,
+      "constant": 12.7
+    },
+    {
+      "id": "Credits.Frums",
+      "level": "HD",
+      "score": 977602,
+      "acc": 97.76,
+      "fc": false,
+      "constant": 10.4
+    },
+    {
+      "id": "Credits.Frums",
+      "level": "IN",
+      "score": 967096,
+      "acc": 97.03,
+      "fc": false,
+      "constant": 13.6
+    },
+    {
+      "id": "Credits.Frums",
+      "level": "AT",
+      "score": 955633,
+      "acc": 95.19,
+      "fc": false,
+      "constant": 15.8
+    },
+    {
+      "id": "Dlyrotz.Likey",
+      "level": "IN",
+      "score": 965936,
+      "acc": 96.77,
+      "fc": false,
+      "constant": 13.7
+    },
+    {
+      "id": "EnginexStartmelodymix.CrossingSound",
+      "level": "EZ",
+      "score": 967347,
+      "acc": 96.46,
+      "fc": false,
+      "constant": 2.5
+    },
+    {
+      "id": "EnginexStartmelodymix.CrossingSound",
+      "level": "HD",
+      "score": 966409,
+      "acc": 96.97,
+      "fc": false,
+      "constant": 8.3
+    },
+    {
+      "id": "EnginexStartmelodymix.CrossingSound",
+      "level": "IN",
+      "score": 986717,
+      "acc": 99.41,
+      "fc": false,
+      "constant": 13.2
+    },
+    {
+      "id": "光.姜米條",
+      "level": "EZ",
+      "score": 971115,
+      "acc": 98.22,
+      "fc": false,
+      "constant": 2
+    },
+    {
+      "id": "光.姜米條",
+      "level": "IN",
+      "score": 965243,
+      "acc": 97.8,
+      "fc": false,
+      "constant": 12.4
+    },
+    {
+      "id": "Wintercube.CtymaxfeatNceS",
+      "level": "EZ",
+      "score": 963390,
+      "acc": 97.5,
+      "fc": false,
+      "constant": 3.5
+    },
+    {
+      "id": "Wintercube.CtymaxfeatNceS",
+      "level": "HD",
+      "score": 984970,
+      "acc": 98.33,
+      "fc": true,
+      "constant": 8.2
+    },
+    {
+      "id": "Wintercube.CtymaxfeatNceS",
+      "level": "IN",
+      "score": 1000000,
+      "acc": 100,
+      "fc": true,
+      "constant": 13.3
+    },
+    {
+      "id": "Cipher20.TetrajectoryfeatCtymax",
+      "level": "IN",
+      "score": 970319,
+      "acc": 97.58,
+      "fc": false,
+      "constant": 14.4
+    },
+    {
+      "id": "混乱Confusion.OnlyMyBlackScore",
+      "level": "EZ",
+      "score": 960002,
+      "acc": 96.54,
+      "fc": false,
+      "constant": 4
+    },
+    {
+      "id": "混乱Confusion.OnlyMyBlackScore",
+      "level": "IN",
+      "score": 967623,
+      "acc": 96.76,
+      "fc": false,
+      "constant": 14.8
+    },
+    {
+      "id": "FULiAUTOSHOOTER.MYUKKE",
+      "level": "EZ",
+      "score": 1000000,
+      "acc": 100,
+      "fc": true,
+      "constant": 3
+    },
+    {
+      "id": "FULiAUTOSHOOTER.MYUKKE",
+      "level": "IN",
+      "score": 971927,
+      "acc": 97.55,
+      "fc": false,
+      "constant": 14.9
+    },
+    {
+      "id": "HumaN.SOTUI",
+      "level": "EZ",
+      "score": 983780,
+      "acc": 99.17,
+      "fc": false,
+      "constant": 3
+    },
+    {
+      "id": "HumaN.SOTUI",
+      "level": "HD",
+      "score": 1000000,
+      "acc": 100,
+      "fc": true,
+      "constant": 8
+    },
+    {
+      "id": "HumaN.SOTUI",
+      "level": "IN",
+      "score": 988643,
+      "acc": 99.57,
+      "fc": false,
+      "constant": 12.9
+    },
+    {
+      "id": "PRAW.Bluewind",
+      "level": "EZ",
+      "score": 979630,
+      "acc": 98.99,
+      "fc": false,
+      "constant": 6
+    },
+    {
+      "id": "PRAW.Bluewind",
+      "level": "IN",
+      "score": 976330,
+      "acc": 97.59,
+      "fc": false,
+      "constant": 15.1
+    },
+    {
+      "id": "PixelRebelz.Normal1zer",
+      "level": "EZ",
+      "score": 989323,
+      "acc": 99.11,
+      "fc": false,
+      "constant": 4.5
+    },
+    {
+      "id": "PixelRebelz.Normal1zer",
+      "level": "IN",
+      "score": 954812,
+      "acc": 95.83,
+      "fc": false,
+      "constant": 15.3
+    },
+    {
+      "id": "Cereris.SunsetRayNceS",
+      "level": "EZ",
+      "score": 979498,
+      "acc": 99.23,
+      "fc": false,
+      "constant": 5.5
+    },
+    {
+      "id": "Cereris.SunsetRayNceS",
+      "level": "HD",
+      "score": 976355,
+      "acc": 97.9,
+      "fc": false,
+      "constant": 10.9
+    },
+    {
+      "id": "Cereris.SunsetRayNceS",
+      "level": "IN",
+      "score": 985690,
+      "acc": 98.41,
+      "fc": true,
+      "constant": 14.7
+    },
+    {
+      "id": "NonMelodicRagezMUGEdit.Normal1zer",
+      "level": "HD",
+      "score": 991090,
+      "acc": 99.01,
+      "fc": true,
+      "constant": 11.6
+    },
+    {
+      "id": "NonMelodicRagezMUGEdit.Normal1zer",
+      "level": "IN",
+      "score": 952224,
+      "acc": 95.05,
+      "fc": false,
+      "constant": 16.1
+    },
+    {
+      "id": "SultanRage.MonstDeath",
+      "level": "HD",
+      "score": 995590,
+      "acc": 99.51,
+      "fc": true,
+      "constant": 7
+    },
+    {
+      "id": "SultanRage.MonstDeath",
+      "level": "IN",
+      "score": 963964,
+      "acc": 96.91,
+      "fc": false,
+      "constant": 12.2
+    },
+    {
+      "id": "SURREALISM.Itsuki",
+      "level": "IN",
+      "score": 985330,
+      "acc": 98.37,
+      "fc": true,
+      "constant": 13.4
+    },
+    {
+      "id": "BonusTime.MegaloPaleWhite",
+      "level": "IN",
+      "score": 984214,
+      "acc": 98.51,
+      "fc": false,
+      "constant": 13.8
+    },
+    {
+      "id": "ENERGYSYNERGYMATRIX.Tanchiky",
+      "level": "EZ",
+      "score": 1000000,
+      "acc": 100,
+      "fc": true,
+      "constant": 5.5
+    },
+    {
+      "id": "ENERGYSYNERGYMATRIX.Tanchiky",
+      "level": "IN",
+      "score": 979543,
+      "acc": 97.81,
+      "fc": false,
+      "constant": 14.4
+    },
+    {
+      "id": "NYA.FLuoRiTe姜米條",
+      "level": "EZ",
+      "score": 985060,
+      "acc": 98.34,
+      "fc": true,
+      "constant": 2
+    },
+    {
+      "id": "NYA.FLuoRiTe姜米條",
+      "level": "HD",
+      "score": 987908,
+      "acc": 99.57,
+      "fc": false,
+      "constant": 8.6
+    },
+    {
+      "id": "NYA.FLuoRiTe姜米條",
+      "level": "IN",
+      "score": 978144,
+      "acc": 98.12,
+      "fc": false,
+      "constant": 13.1
+    },
+    {
+      "id": "JunXionBetweenLifeAndDeathVIPMix.1N6Fs",
+      "level": "IN",
+      "score": 985523,
+      "acc": 98.58,
+      "fc": false,
+      "constant": 13.4
+    },
+    {
+      "id": "cryout.JuE",
+      "level": "HD",
+      "score": 984070,
+      "acc": 98.23,
+      "fc": true,
+      "constant": 9.9
+    },
+    {
+      "id": "cryout.JuE",
+      "level": "IN",
+      "score": 970142,
+      "acc": 97.74,
+      "fc": false,
+      "constant": 13.6
+    },
+    {
+      "id": "Reimei.影虎",
+      "level": "IN",
+      "score": 944106,
+      "acc": 94.63,
+      "fc": false,
+      "constant": 15.1
+    },
+    {
+      "id": "尊師TheGuru.rider",
+      "level": "HD",
+      "score": 1000000,
+      "acc": 100,
+      "fc": true,
+      "constant": 11.6
+    },
+    {
+      "id": "尊師TheGuru.rider",
+      "level": "IN",
+      "score": 937755,
+      "acc": 94.32,
+      "fc": false,
+      "constant": 15.4
+    },
+    {
+      "id": "Spasmodic.姜米條颶風元力上人",
+      "level": "HD",
+      "score": 983240,
+      "acc": 98.54,
+      "fc": false,
+      "constant": 12.9
+    },
+    {
+      "id": "Spasmodic.姜米條颶風元力上人",
+      "level": "IN",
+      "score": 947850,
+      "acc": 94.28,
+      "fc": false,
+      "constant": 15.5
+    },
+    {
+      "id": "Spasmodic.姜米條颶風元力上人",
+      "level": "AT",
+      "score": 924659,
+      "acc": 92.44,
+      "fc": false,
+      "constant": 16.7
+    },
+    {
+      "id": "LeaveAllBehind.rider",
+      "level": "EZ",
+      "score": 965457,
+      "acc": 96.67,
+      "fc": false,
+      "constant": 3
+    },
+    {
+      "id": "LeaveAllBehind.rider",
+      "level": "IN",
+      "score": 978233,
+      "acc": 97.72,
+      "fc": false,
+      "constant": 12.7
+    },
+    {
+      "id": "LeaveAllBehind.rider",
+      "level": "AT",
+      "score": 963344,
+      "acc": 96.82,
+      "fc": false,
+      "constant": 15
+    },
+    {
+      "id": "ColorfulDays.P4koofeatつゆり花鈴",
+      "level": "EZ",
+      "score": 1000000,
+      "acc": 100,
+      "fc": true,
+      "constant": 5
+    },
+    {
+      "id": "ColorfulDays.P4koofeatつゆり花鈴",
+      "level": "HD",
+      "score": 1000000,
+      "acc": 100,
+      "fc": true,
+      "constant": 7
+    },
+    {
+      "id": "ColorfulDays.P4koofeatつゆり花鈴",
+      "level": "IN",
+      "score": 981226,
+      "acc": 98.3,
+      "fc": false,
+      "constant": 12.6
+    },
+    {
+      "id": "microwav.dandeless",
+      "level": "IN",
+      "score": 967700,
+      "acc": 96.47,
+      "fc": false,
+      "constant": 14.7
+    },
+    {
+      "id": "重生.姜米條",
+      "level": "EZ",
+      "score": 1000000,
+      "acc": 100,
+      "fc": true,
+      "constant": 4.5
+    },
+    {
+      "id": "重生.姜米條",
+      "level": "IN",
+      "score": 958276,
+      "acc": 96.55,
+      "fc": false,
+      "constant": 14.3
+    },
+    {
+      "id": "NOONEYESMAN.MYUKKE",
+      "level": "HD",
+      "score": 1000000,
+      "acc": 100,
+      "fc": true,
+      "constant": 10.9
+    },
+    {
+      "id": "NOONEYESMAN.MYUKKE",
+      "level": "IN",
+      "score": 959033,
+      "acc": 96.31,
+      "fc": false,
+      "constant": 15.5
+    },
+    {
+      "id": "望影の方舟Six.SeURa",
+      "level": "EZ",
+      "score": 991000,
+      "acc": 99,
+      "fc": true,
+      "constant": 6.5
+    },
+    {
+      "id": "望影の方舟Six.SeURa",
+      "level": "HD",
+      "score": 958331,
+      "acc": 96.65,
+      "fc": false,
+      "constant": 11.9
+    },
+    {
+      "id": "Igallta.SeURa",
+      "level": "EZ",
+      "score": 1000000,
+      "acc": 100,
+      "fc": true,
+      "constant": 7.5
+    },
+    {
+      "id": "Igallta.SeURa",
+      "level": "HD",
+      "score": 961179,
+      "acc": 96.92,
+      "fc": false,
+      "constant": 12.2
+    },
+    {
+      "id": "Igallta.SeURa",
+      "level": "IN",
+      "score": 936134,
+      "acc": 94.36,
+      "fc": false,
+      "constant": 16.1
+    },
+    {
+      "id": "Igallta.SeURa",
+      "level": "AT",
+      "score": 929194,
+      "acc": 92.97,
+      "fc": false,
+      "constant": 17.4
+    },
+    {
+      "id": "ClockParadox.WyvernP",
+      "level": "IN",
+      "score": 955640,
+      "acc": 96.61,
+      "fc": false,
+      "constant": 12.5
+    },
+    {
+      "id": "Chronologika.Hundotte",
+      "level": "HD",
+      "score": 966335,
+      "acc": 97.19,
+      "fc": false,
+      "constant": 9.8
+    },
+    {
+      "id": "Chronologika.Hundotte",
+      "level": "IN",
+      "score": 985237,
+      "acc": 99.34,
+      "fc": false,
+      "constant": 13.9
+    },
+    {
+      "id": "NickofTime.P4koo",
+      "level": "HD",
+      "score": 995590,
+      "acc": 99.51,
+      "fc": true,
+      "constant": 9.3
+    },
+    {
+      "id": "NickofTime.P4koo",
+      "level": "IN",
+      "score": 968326,
+      "acc": 96.93,
+      "fc": false,
+      "constant": 14.7
+    },
+    {
+      "id": "Chronomia.Lime",
+      "level": "IN",
+      "score": 952627,
+      "acc": 96.12,
+      "fc": false,
+      "constant": 15.4
+    },
+    {
+      "id": "ChronosCollapseLaCampanella.SunsetRay",
+      "level": "IN",
+      "score": 931545,
+      "acc": 93.78,
+      "fc": false,
+      "constant": 16.3
+    },
+    {
+      "id": "Rrharil.TeamGrimoire",
+      "level": "HD",
+      "score": 959755,
+      "acc": 96.78,
+      "fc": false,
+      "constant": 12.7
+    },
+    {
+      "id": "Rrharil.TeamGrimoire",
+      "level": "IN",
+      "score": 939685,
+      "acc": 93.85,
+      "fc": false,
+      "constant": 16.1
+    },
+    {
+      "id": "Rrharil.TeamGrimoire",
+      "level": "AT",
+      "score": 911076,
+      "acc": 90.4,
+      "fc": false,
+      "constant": 17.6
+    },
+    {
+      "id": "CraveWave.LandRoot",
+      "level": "IN",
+      "score": 966912,
+      "acc": 96.81,
+      "fc": false,
+      "constant": 13.7
+    },
+    {
+      "id": "TheChariotREVIIVAL.Attoclef",
+      "level": "EZ",
+      "score": 976288,
+      "acc": 97.59,
+      "fc": false,
+      "constant": 5
+    },
+    {
+      "id": "Luminescence.米虾Fomiki初云CLoudie",
+      "level": "EZ",
+      "score": 966277,
+      "acc": 97.18,
+      "fc": false,
+      "constant": 5.5
+    },
+    {
+      "id": "Luminescence.米虾Fomiki初云CLoudie",
+      "level": "IN",
+      "score": 970451,
+      "acc": 97.89,
+      "fc": false,
+      "constant": 14.5
+    },
+    {
+      "id": "Retribution.nmyKryexe",
+      "level": "IN",
+      "score": 922474,
+      "acc": 92.78,
+      "fc": false,
+      "constant": 16.2
+    },
+    {
+      "id": "DESTRUCTION321.Normal1zervsBrokenNerdz",
+      "level": "EZ",
+      "score": 968413,
+      "acc": 97.04,
+      "fc": false,
+      "constant": 8.5
+    },
+    {
+      "id": "DESTRUCTION321.Normal1zervsBrokenNerdz",
+      "level": "HD",
+      "score": 981963,
+      "acc": 98.27,
+      "fc": false,
+      "constant": 13.1
+    },
+    {
+      "id": "DESTRUCTION321.Normal1zervsBrokenNerdz",
+      "level": "IN",
+      "score": 933503,
+      "acc": 93.98,
+      "fc": false,
+      "constant": 16.3
+    },
+    {
+      "id": "DESTRUCTION321.Normal1zervsBrokenNerdz",
+      "level": "AT",
+      "score": 910971,
+      "acc": 90.86,
+      "fc": false,
+      "constant": 17.3
+    },
+    {
+      "id": "DistortedFate.Sakuzyo",
+      "level": "EZ",
+      "score": 1000000,
+      "acc": 100,
+      "fc": true,
+      "constant": 8.1
+    },
+    {
+      "id": "DistortedFate.Sakuzyo",
+      "level": "AT",
+      "score": 917191,
+      "acc": 91.72,
+      "fc": false,
+      "constant": 17.4
+    },
+    {
+      "id": "AboutTheUniverse.SOTUIMIssionary",
+      "level": "HD",
+      "score": 976263,
+      "acc": 98.62,
+      "fc": false,
+      "constant": 9.7
+    },
+    {
+      "id": "AboutTheUniverse.SOTUIMIssionary",
+      "level": "IN",
+      "score": 991270,
+      "acc": 99.03,
+      "fc": true,
+      "constant": 14.4
+    },
+    {
+      "id": "Implexrough.Silentroommommy",
+      "level": "IN",
+      "score": 968843,
+      "acc": 96.82,
+      "fc": false,
+      "constant": 15.3
+    },
+    {
+      "id": "Evanescent.LeaF",
+      "level": "IN",
+      "score": 928861,
+      "acc": 93.54,
+      "fc": false,
+      "constant": 15.7
+    },
+    {
+      "id": "EntrancetotheChaos.打打だいずvssiromaru",
+      "level": "EZ",
+      "score": 971685,
+      "acc": 97.74,
+      "fc": false,
+      "constant": 8.8
+    },
+    {
+      "id": "EntrancetotheChaos.打打だいずvssiromaru",
+      "level": "HD",
+      "score": 994510,
+      "acc": 99.39,
+      "fc": true,
+      "constant": 13.7
+    },
+    {
+      "id": "EntrancetotheChaos.打打だいずvssiromaru",
+      "level": "AT",
+      "score": 901626,
+      "acc": 90.21,
+      "fc": false,
+      "constant": 17.6
+    },
+    {
+      "id": "ExoplanetaryMirage.かめりあ",
+      "level": "HD",
+      "score": 968089,
+      "acc": 96.77,
+      "fc": false,
+      "constant": 13.4
+    },
+    {
+      "id": "ExoplanetaryMirage.かめりあ",
+      "level": "IN",
+      "score": 937534,
+      "acc": 93.48,
+      "fc": false,
+      "constant": 16.9
+    },
+    {
+      "id": "ExoplanetaryMirage.かめりあ",
+      "level": "AT",
+      "score": 908211,
+      "acc": 91.07,
+      "fc": false,
+      "constant": 17.9
+    },
+    {
+      "id": "TrueHomeTrueWorldRework.816ThreeNumbers",
+      "level": "IN",
+      "score": 943438,
+      "acc": 95.04,
+      "fc": false,
+      "constant": 15.8
+    },
+    {
+      "id": "Ametrine.GRYSCLMIssionary",
+      "level": "AT",
+      "score": 938950,
+      "acc": 94.35,
+      "fc": false,
+      "constant": 16.2
+    },
+    {
+      "id": "Petrichor.voidMournfinale",
+      "level": "IN",
+      "score": 944329,
+      "acc": 94.04,
+      "fc": false,
+      "constant": 16.5
+    },
+    {
+      "id": "Petrichor.voidMournfinale",
+      "level": "AT",
+      "score": 915485,
+      "acc": 91.68,
+      "fc": false,
+      "constant": 17.5
+    },
+    {
+      "id": "ハテ.rNFrums",
+      "level": "IN",
+      "score": 944816,
+      "acc": 94.21,
+      "fc": false,
+      "constant": 16.7
+    },
+    {
+      "id": "ハテ.rNFrums",
+      "level": "AT",
+      "score": 926982,
+      "acc": 92.09,
+      "fc": false,
+      "constant": 17.9
+    },
+    {
+      "id": "DesultorySignals.technoplanet",
+      "level": "EZ",
+      "score": 970856,
+      "acc": 98.37,
+      "fc": false,
+      "constant": 10
+    },
+    {
+      "id": "DesultorySignals.technoplanet",
+      "level": "IN",
+      "score": 920551,
+      "acc": 92.4,
+      "fc": false,
+      "constant": 17
+    },
+    {
+      "id": "DesultorySignals.technoplanet",
+      "level": "AT",
+      "score": 892743,
+      "acc": 89.33,
+      "fc": false,
+      "constant": 18
+    },
+    {
+      "id": "Message.くるぶっこちゃん",
+      "level": "EZ",
+      "score": 1000000,
+      "acc": 100,
+      "fc": true,
+      "constant": 3
+    },
+    {
+      "id": "Message.くるぶっこちゃん",
+      "level": "IN",
+      "score": 960269,
+      "acc": 95.69,
+      "fc": false,
+      "constant": 15.6
+    },
+    {
+      "id": "Message.くるぶっこちゃん",
+      "level": "AT",
+      "score": 917709,
+      "acc": 92.03,
+      "fc": false,
+      "constant": 16.5
+    },
+    {
+      "id": "WhatdoyouwantmorethanaHappyending.Apo11oHALOprogramft安月名莉子大瀬良あい",
+      "level": "EZ",
+      "score": 972355,
+      "acc": 97.46,
+      "fc": false,
+      "constant": 0.5
+    },
+    {
+      "id": "WhatdoyouwantmorethanaHappyending.Apo11oHALOprogramft安月名莉子大瀬良あい",
+      "level": "AT",
+      "score": 935879,
+      "acc": 93.37,
+      "fc": false,
+      "constant": 17.1
+    },
+    {
+      "id": "Doppelganger.LeaF",
+      "level": "EZ",
+      "score": 977801,
+      "acc": 98.81,
+      "fc": false,
+      "constant": 5
+    },
+    {
+      "id": "Doppelganger.LeaF",
+      "level": "IN",
+      "score": 950266,
+      "acc": 95.94,
+      "fc": false,
+      "constant": 15.1
+    },
+    {
+      "id": "もぺもぺ.LeaF",
+      "level": "IN",
+      "score": 979269,
+      "acc": 98.28,
+      "fc": false,
+      "constant": 11.1
+    },
+    {
+      "id": "もぺもぺ.LeaF",
+      "level": "AT",
+      "score": 963067,
+      "acc": 97.04,
+      "fc": false,
+      "constant": 15.4
+    },
+    {
+      "id": "MARENOL.LeaF",
+      "level": "IN",
+      "score": 963641,
+      "acc": 97.05,
+      "fc": false,
+      "constant": 13.9
+    },
+    {
+      "id": "萤火虫の怨.闫东炜",
+      "level": "IN",
+      "score": 976286,
+      "acc": 97.77,
+      "fc": false,
+      "constant": 13.1
+    },
+    {
+      "id": "万吨匿名信.闫东炜",
+      "level": "HD",
+      "score": 984174,
+      "acc": 98.86,
+      "fc": false,
+      "constant": 9.5
+    },
+    {
+      "id": "万吨匿名信.闫东炜",
+      "level": "IN",
+      "score": 974430,
+      "acc": 98.43,
+      "fc": false,
+      "constant": 13
+    },
+    {
+      "id": "风屿.闫东炜",
+      "level": "EZ",
+      "score": 1000000,
+      "acc": 100,
+      "fc": true,
+      "constant": 5.5
+    },
+    {
+      "id": "风屿.闫东炜",
+      "level": "AT",
+      "score": 970565,
+      "acc": 97.19,
+      "fc": false,
+      "constant": 15.1
+    },
+    {
+      "id": "dBdoll.YUESTEVENuen",
+      "level": "IN",
+      "score": 1000000,
+      "acc": 100,
+      "fc": true,
+      "constant": 8.3
+    },
+    {
+      "id": "dBdoll.YUESTEVENuen",
+      "level": "AT",
+      "score": 974682,
+      "acc": 98.71,
+      "fc": false,
+      "constant": 13.4
+    },
+    {
+      "id": "Dash.小红Akane李祥辉",
+      "level": "HD",
+      "score": 1000000,
+      "acc": 100,
+      "fc": true,
+      "constant": 5.5
+    },
+    {
+      "id": "Dash.小红Akane李祥辉",
+      "level": "IN",
+      "score": 987400,
+      "acc": 98.6,
+      "fc": true,
+      "constant": 9.7
+    },
+    {
+      "id": "云女孩.符白牙SiYFics",
+      "level": "IN",
+      "score": 992890,
+      "acc": 99.21,
+      "fc": true,
+      "constant": 12.8
+    },
+    {
+      "id": "DropIt.Asuka",
+      "level": "HD",
+      "score": 964592,
+      "acc": 97.15,
+      "fc": false,
+      "constant": 9.2
+    },
+    {
+      "id": "DropIt.Asuka",
+      "level": "IN",
+      "score": 979234,
+      "acc": 98.36,
+      "fc": false,
+      "constant": 14.2
+    },
+    {
+      "id": "RIPPER.Friedwav",
+      "level": "EZ",
+      "score": 1000000,
+      "acc": 100,
+      "fc": true,
+      "constant": 6.5
+    },
+    {
+      "id": "RIPPER.Friedwav",
+      "level": "IN",
+      "score": 950905,
+      "acc": 95.33,
+      "fc": false,
+      "constant": 15.4
+    },
+    {
+      "id": "Aphasia.闫东炜",
+      "level": "HD",
+      "score": 994870,
+      "acc": 99.43,
+      "fc": true,
+      "constant": 8.8
+    },
+    {
+      "id": "Aphasia.闫东炜",
+      "level": "IN",
+      "score": 982198,
+      "acc": 99.14,
+      "fc": false,
+      "constant": 13.3
+    },
+    {
+      "id": "开心病.闫东炜",
+      "level": "IN",
+      "score": 985060,
+      "acc": 98.34,
+      "fc": true,
+      "constant": 13.8
+    },
+    {
+      "id": "華灯爱.闫东炜",
+      "level": "HD",
+      "score": 983530,
+      "acc": 98.17,
+      "fc": true,
+      "constant": 10.6
+    },
+    {
+      "id": "華灯爱.闫东炜",
+      "level": "IN",
+      "score": 989290,
+      "acc": 98.81,
+      "fc": true,
+      "constant": 13.7
+    },
+    {
+      "id": "FindMe.Kforest",
+      "level": "HD",
+      "score": 994780,
+      "acc": 99.42,
+      "fc": true,
+      "constant": 10.5
+    },
+    {
+      "id": "FindMe.Kforest",
+      "level": "IN",
+      "score": 989290,
+      "acc": 98.81,
+      "fc": true,
+      "constant": 14.3
+    },
+    {
+      "id": "Sein.朔Apo11oprogramvsお月さま交響曲ftkuroa荒巻",
+      "level": "IN",
+      "score": 951789,
+      "acc": 95.36,
+      "fc": false,
+      "constant": 15.1
+    },
+    {
+      "id": "狂喜蘭舞.LeaF",
+      "level": "IN",
+      "score": 975686,
+      "acc": 97.42,
+      "fc": false,
+      "constant": 14.3
+    },
+    {
+      "id": "SparkleNewLife.rider",
+      "level": "HD",
+      "score": 977516,
+      "acc": 97.75,
+      "fc": false,
+      "constant": 9.2
+    },
+    {
+      "id": "SparkleNewLife.rider",
+      "level": "IN",
+      "score": 1000000,
+      "acc": 100,
+      "fc": true,
+      "constant": 12.8
+    },
+    {
+      "id": "KhronostasisKatharsis.Halv",
+      "level": "HD",
+      "score": 962416,
+      "acc": 97.42,
+      "fc": false,
+      "constant": 11.8
+    },
+    {
+      "id": "KhronostasisKatharsis.Halv",
+      "level": "IN",
+      "score": 995230,
+      "acc": 99.47,
+      "fc": true,
+      "constant": 14
+    },
+    {
+      "id": "SnowDesert.WyvernP",
+      "level": "EZ",
+      "score": 988660,
+      "acc": 98.74,
+      "fc": true,
+      "constant": 5
+    },
+    {
+      "id": "Burn.NceS",
+      "level": "HD",
+      "score": 960501,
+      "acc": 97.03,
+      "fc": false,
+      "constant": 11.2
+    },
+    {
+      "id": "Burn.NceS",
+      "level": "IN",
+      "score": 959667,
+      "acc": 97.09,
+      "fc": false,
+      "constant": 15.2
+    },
+    {
+      "id": "NextTime.SaMZIng",
+      "level": "IN",
+      "score": 982592,
+      "acc": 99.4,
+      "fc": false,
+      "constant": 12.4
+    },
+    {
+      "id": "RubbishSorting.CtymaxvsNceS",
+      "level": "IN",
+      "score": 991180,
+      "acc": 99.02,
+      "fc": true,
+      "constant": 13.1
+    },
+    {
+      "id": "AnotherMe.NeutralMoon",
+      "level": "IN",
+      "score": 982907,
+      "acc": 98.37,
+      "fc": false,
+      "constant": 13.6
+    },
+    {
+      "id": "mechanted.rareguy",
+      "level": "EZ",
+      "score": 971777,
+      "acc": 97.26,
+      "fc": false,
+      "constant": 3
+    },
+    {
+      "id": "mechanted.rareguy",
+      "level": "IN",
+      "score": 972070,
+      "acc": 97.33,
+      "fc": false,
+      "constant": 14.9
+    },
+    {
+      "id": "lifeflashesbeforeweebeyes.BilliumMoto",
+      "level": "HD",
+      "score": 983948,
+      "acc": 99.01,
+      "fc": false,
+      "constant": 11.9
+    },
+    {
+      "id": "lifeflashesbeforeweebeyes.BilliumMoto",
+      "level": "IN",
+      "score": 981583,
+      "acc": 98.92,
+      "fc": false,
+      "constant": 14.9
+    },
+    {
+      "id": "BreakThroughTheBarrier.lixound",
+      "level": "EZ",
+      "score": 977141,
+      "acc": 97.73,
+      "fc": false,
+      "constant": 5.5
+    },
+    {
+      "id": "BreakThroughTheBarrier.lixound",
+      "level": "HD",
+      "score": 966656,
+      "acc": 96.56,
+      "fc": false,
+      "constant": 9.5
+    },
+    {
+      "id": "BreakThroughTheBarrier.lixound",
+      "level": "IN",
+      "score": 962436,
+      "acc": 97.42,
+      "fc": false,
+      "constant": 14.5
+    },
+    {
+      "id": "Chronostasis.黒皇帝",
+      "level": "EZ",
+      "score": 961070,
+      "acc": 97.16,
+      "fc": false,
+      "constant": 6
+    },
+    {
+      "id": "Chronostasis.黒皇帝",
+      "level": "IN",
+      "score": 957902,
+      "acc": 95.62,
+      "fc": false,
+      "constant": 16
+    },
+    {
+      "id": "DeadSoul.SoundSouler",
+      "level": "HD",
+      "score": 1000000,
+      "acc": 100,
+      "fc": true,
+      "constant": 12.3
+    },
+    {
+      "id": "DeadSoul.SoundSouler",
+      "level": "IN",
+      "score": 973641,
+      "acc": 97.33,
+      "fc": false,
+      "constant": 14.4
+    },
+    {
+      "id": "InfinityHeaven.HyuN",
+      "level": "HD",
+      "score": 977961,
+      "acc": 99.16,
+      "fc": false,
+      "constant": 8.4
+    },
+    {
+      "id": "InfinityHeaven.HyuN",
+      "level": "IN",
+      "score": 977478,
+      "acc": 98.24,
+      "fc": false,
+      "constant": 13.9
+    },
+    {
+      "id": "Disorder.HyuNfeatYURI",
+      "level": "HD",
+      "score": 979937,
+      "acc": 98.61,
+      "fc": false,
+      "constant": 10.3
+    },
+    {
+      "id": "Disorder.HyuNfeatYURI",
+      "level": "IN",
+      "score": 978979,
+      "acc": 98.35,
+      "fc": false,
+      "constant": 14.8
+    },
+    {
+      "id": "CROSSSOUL.HyuNfeatSyepias",
+      "level": "EZ",
+      "score": 986050,
+      "acc": 98.45,
+      "fc": true,
+      "constant": 7.5
+    },
+    {
+      "id": "CROSSSOUL.HyuNfeatSyepias",
+      "level": "IN",
+      "score": 938134,
+      "acc": 93.76,
+      "fc": false,
+      "constant": 16.4
+    },
+    {
+      "id": "SpeedUp.DarTokki",
+      "level": "IN",
+      "score": 966131,
+      "acc": 97.64,
+      "fc": false,
+      "constant": 14
+    },
+    {
+      "id": "MagentaPotion.EmoCo",
+      "level": "IN",
+      "score": 992890,
+      "acc": 99.21,
+      "fc": true,
+      "constant": 14.4
+    },
+    {
+      "id": "GetBack.CAP3",
+      "level": "EZ",
+      "score": 968363,
+      "acc": 97.59,
+      "fc": false,
+      "constant": 6.5
+    },
+    {
+      "id": "GetBack.CAP3",
+      "level": "IN",
+      "score": 976311,
+      "acc": 98.83,
+      "fc": false,
+      "constant": 14.1
+    },
+    {
+      "id": "Palescreen.WyvernPfeatMadol",
+      "level": "HD",
+      "score": 976058,
+      "acc": 98.95,
+      "fc": false,
+      "constant": 12.3
+    },
+    {
+      "id": "Palescreen.WyvernPfeatMadol",
+      "level": "IN",
+      "score": 961464,
+      "acc": 96,
+      "fc": false,
+      "constant": 15.9
+    },
+    {
+      "id": "GOODTEK.EBIMAYO",
+      "level": "IN",
+      "score": 987850,
+      "acc": 98.65,
+      "fc": true,
+      "constant": 14.3
+    },
+    {
+      "id": "GOODBOUNCE.EBIMAYO",
+      "level": "EZ",
+      "score": 979037,
+      "acc": 98.76,
+      "fc": false,
+      "constant": 7.5
+    },
+    {
+      "id": "GOODWORLD.EBIMAYO",
+      "level": "EZ",
+      "score": 978134,
+      "acc": 98.42,
+      "fc": false,
+      "constant": 3
+    },
+    {
+      "id": "GOODWORLD.EBIMAYO",
+      "level": "HD",
+      "score": 966986,
+      "acc": 97.08,
+      "fc": false,
+      "constant": 11.4
+    },
+    {
+      "id": "GOODWORLD.EBIMAYO",
+      "level": "IN",
+      "score": 982200,
+      "acc": 99.59,
+      "fc": false,
+      "constant": 14.9
+    },
+    {
+      "id": "GOODFORTUNE.EBIMAYO",
+      "level": "IN",
+      "score": 943130,
+      "acc": 94.7,
+      "fc": false,
+      "constant": 15.7
+    },
+    {
+      "id": "GOODRAGE.EBIMAYO",
+      "level": "EZ",
+      "score": 1000000,
+      "acc": 100,
+      "fc": true,
+      "constant": 5
+    },
+    {
+      "id": "GOODRAGE.EBIMAYO",
+      "level": "IN",
+      "score": 934625,
+      "acc": 94.39,
+      "fc": false,
+      "constant": 16
+    },
+    {
+      "id": "TheMountainEater.PaulBazooka",
+      "level": "EZ",
+      "score": 964528,
+      "acc": 96.54,
+      "fc": false,
+      "constant": 5.5
+    },
+    {
+      "id": "TheMountainEater.PaulBazooka",
+      "level": "HD",
+      "score": 975741,
+      "acc": 97.85,
+      "fc": false,
+      "constant": 9.6
+    },
+    {
+      "id": "TheMountainEater.PaulBazooka",
+      "level": "IN",
+      "score": 976997,
+      "acc": 98.84,
+      "fc": false,
+      "constant": 14.8
+    },
+    {
+      "id": "Orthodox.tokiwa",
+      "level": "HD",
+      "score": 978130,
+      "acc": 98.54,
+      "fc": false,
+      "constant": 8.5
+    },
+    {
+      "id": "Orthodox.tokiwa",
+      "level": "IN",
+      "score": 989720,
+      "acc": 98.97,
+      "fc": false,
+      "constant": 13.7
+    },
+    {
+      "id": "EndMe.ZxNXasDelaina",
+      "level": "EZ",
+      "score": 989290,
+      "acc": 98.81,
+      "fc": true,
+      "constant": 5.5
+    },
+    {
+      "id": "EndMe.ZxNXasDelaina",
+      "level": "IN",
+      "score": 979621,
+      "acc": 99.34,
+      "fc": false,
+      "constant": 14.2
+    },
+    {
+      "id": "ParallelRetrogressionGameVer.Tetrajectory",
+      "level": "IN",
+      "score": 990479,
+      "acc": 99.27,
+      "fc": false,
+      "constant": 14.2
+    },
+    {
+      "id": "Starduster.Quree",
+      "level": "EZ",
+      "score": 966485,
+      "acc": 97.67,
+      "fc": false,
+      "constant": 5.5
+    },
+    {
+      "id": "Starduster.Quree",
+      "level": "IN",
+      "score": 963844,
+      "acc": 96.77,
+      "fc": false,
+      "constant": 15.2
+    },
+    {
+      "id": "Electron.ElousFZ",
+      "level": "EZ",
+      "score": 982777,
+      "acc": 98.32,
+      "fc": false,
+      "constant": 3.5
+    },
+    {
+      "id": "Electron.ElousFZ",
+      "level": "HD",
+      "score": 1000000,
+      "acc": 100,
+      "fc": true,
+      "constant": 9.4
+    },
+    {
+      "id": "Electron.ElousFZ",
+      "level": "IN",
+      "score": 1000000,
+      "acc": 100,
+      "fc": true,
+      "constant": 13.2
+    },
+    {
+      "id": "SIGMA.Kryexe",
+      "level": "HD",
+      "score": 1000000,
+      "acc": 100,
+      "fc": true,
+      "constant": 10.5
+    },
+    {
+      "id": "SIGMA.Kryexe",
+      "level": "IN",
+      "score": 939554,
+      "acc": 94.84,
+      "fc": false,
+      "constant": 15.8
+    },
+    {
+      "id": "HardcoreKwaya.EnFr",
+      "level": "IN",
+      "score": 978502,
+      "acc": 97.76,
+      "fc": false,
+      "constant": 14.6
+    },
+    {
+      "id": "Aventyr.GrandThawRigelTheatre",
+      "level": "HD",
+      "score": 1000000,
+      "acc": 100,
+      "fc": true,
+      "constant": 9.9
+    },
+    {
+      "id": "Aventyr.GrandThawRigelTheatre",
+      "level": "IN",
+      "score": 971523,
+      "acc": 97.98,
+      "fc": false,
+      "constant": 13.7
+    },
+    {
+      "id": "Trane.MALVA",
+      "level": "EZ",
+      "score": 981385,
+      "acc": 98.12,
+      "fc": false,
+      "constant": 1.5
+    },
+    {
+      "id": "Trane.MALVA",
+      "level": "IN",
+      "score": 978507,
+      "acc": 99.1,
+      "fc": false,
+      "constant": 14.2
+    },
+    {
+      "id": "雪降りメリクリ.A39",
+      "level": "EZ",
+      "score": 965617,
+      "acc": 96.71,
+      "fc": false,
+      "constant": 4.5
+    },
+    {
+      "id": "雪降りメリクリ.A39",
+      "level": "IN",
+      "score": 968710,
+      "acc": 96.97,
+      "fc": false,
+      "constant": 15.4
+    },
+    {
+      "id": "CervelleConnexion.SCTL",
+      "level": "IN",
+      "score": 963137,
+      "acc": 97.56,
+      "fc": false,
+      "constant": 14.5
+    },
+    {
+      "id": "modulus.PTB10",
+      "level": "IN",
+      "score": 975622,
+      "acc": 97.7,
+      "fc": false,
+      "constant": 14.9
+    },
+    {
+      "id": "Wavetapper.Frums",
+      "level": "EZ",
+      "score": 977882,
+      "acc": 98.05,
+      "fc": false,
+      "constant": 6
+    },
+    {
+      "id": "Wavetapper.Frums",
+      "level": "IN",
+      "score": 992408,
+      "acc": 99.4,
+      "fc": false,
+      "constant": 13.9
+    },
+    {
+      "id": "大和撫子WildDances.adapatorvsDRIVE",
+      "level": "IN",
+      "score": 951475,
+      "acc": 95.69,
+      "fc": false,
+      "constant": 15.1
+    },
+    {
+      "id": "Eltaw.Fl00t",
+      "level": "IN",
+      "score": 973720,
+      "acc": 97.91,
+      "fc": false,
+      "constant": 14.8
+    },
+    {
+      "id": "Initialize.iF",
+      "level": "EZ",
+      "score": 987850,
+      "acc": 98.65,
+      "fc": true,
+      "constant": 2.5
+    },
+    {
+      "id": "Initialize.iF",
+      "level": "IN",
+      "score": 1000000,
+      "acc": 100,
+      "fc": true,
+      "constant": 11.6
+    },
+    {
+      "id": "桜樹街道.kozatosnow",
+      "level": "EZ",
+      "score": 964025,
+      "acc": 97.62,
+      "fc": false,
+      "constant": 3.5
+    },
+    {
+      "id": "桜樹街道.kozatosnow",
+      "level": "HD",
+      "score": 986230,
+      "acc": 98.47,
+      "fc": true,
+      "constant": 8.1
+    },
+    {
+      "id": "桜樹街道.kozatosnow",
+      "level": "IN",
+      "score": 976575,
+      "acc": 97.66,
+      "fc": false,
+      "constant": 13
+    },
+    {
+      "id": "GetReady.iF",
+      "level": "EZ",
+      "score": 986680,
+      "acc": 98.52,
+      "fc": true,
+      "constant": 6
+    },
+    {
+      "id": "GetReady.iF",
+      "level": "HD",
+      "score": 980575,
+      "acc": 99.45,
+      "fc": false,
+      "constant": 10.7
+    },
+    {
+      "id": "GetReady.iF",
+      "level": "IN",
+      "score": 988930,
+      "acc": 98.77,
+      "fc": true,
+      "constant": 13.8
+    },
+    {
+      "id": "volcanic.DETROakaルゼ",
+      "level": "HD",
+      "score": 1000000,
+      "acc": 100,
+      "fc": true,
+      "constant": 12.1
+    },
+    {
+      "id": "volcanic.DETROakaルゼ",
+      "level": "IN",
+      "score": 985721,
+      "acc": 98.69,
+      "fc": false,
+      "constant": 14.7
+    },
+    {
+      "id": "volcanic.DETROakaルゼ",
+      "level": "AT",
+      "score": 935188,
+      "acc": 93.42,
+      "fc": false,
+      "constant": 16.6
+    },
+    {
+      "id": "BetterGraphicAnimation.ルゼ",
+      "level": "IN",
+      "score": 940573,
+      "acc": 94.57,
+      "fc": false,
+      "constant": 15.3
+    },
+    {
+      "id": "XING.ginkiha",
+      "level": "IN",
+      "score": 969937,
+      "acc": 97.02,
+      "fc": false,
+      "constant": 14
+    },
+    {
+      "id": "FinalStep.Lime",
+      "level": "HD",
+      "score": 967245,
+      "acc": 96.95,
+      "fc": false,
+      "constant": 11
+    },
+    {
+      "id": "FinalStep.Lime",
+      "level": "IN",
+      "score": 973128,
+      "acc": 97.13,
+      "fc": false,
+      "constant": 14.1
+    },
+    {
+      "id": "Cthugha.USAO",
+      "level": "HD",
+      "score": 960606,
+      "acc": 97.06,
+      "fc": false,
+      "constant": 10.4
+    },
+    {
+      "id": "Cthugha.USAO",
+      "level": "IN",
+      "score": 949552,
+      "acc": 95.51,
+      "fc": false,
+      "constant": 16
+    },
+    {
+      "id": "Cthugha.USAO",
+      "level": "AT",
+      "score": 942607,
+      "acc": 94.98,
+      "fc": false,
+      "constant": 16.1
+    },
+    {
+      "id": "WithYou.Cashew",
+      "level": "EZ",
+      "score": 1000000,
+      "acc": 100,
+      "fc": true,
+      "constant": 3.5
+    },
+    {
+      "id": "WithYou.Cashew",
+      "level": "IN",
+      "score": 978133,
+      "acc": 99,
+      "fc": false,
+      "constant": 13.5
+    },
+    {
+      "id": "UnorthodoxThoughts.Joulez",
+      "level": "IN",
+      "score": 991540,
+      "acc": 99.06,
+      "fc": true,
+      "constant": 13.9
+    },
+    {
+      "id": "Apocalyptic.ZClaxxSumaiLight",
+      "level": "HD",
+      "score": 985505,
+      "acc": 98.6,
+      "fc": false,
+      "constant": 10.4
+    },
+    {
+      "id": "Apocalyptic.ZClaxxSumaiLight",
+      "level": "IN",
+      "score": 967516,
+      "acc": 96.53,
+      "fc": false,
+      "constant": 14.1
+    },
+    {
+      "id": "游园地.椒盐菠萝",
+      "level": "EZ",
+      "score": 982900,
+      "acc": 98.1,
+      "fc": true,
+      "constant": 2.5
+    },
+    {
+      "id": "游园地.椒盐菠萝",
+      "level": "IN",
+      "score": 994330,
+      "acc": 99.37,
+      "fc": true,
+      "constant": 13
+    },
+    {
+      "id": "energytrixxx.KAH",
+      "level": "HD",
+      "score": 1000000,
+      "acc": 100,
+      "fc": true,
+      "constant": 10.4
+    },
+    {
+      "id": "energytrixxx.KAH",
+      "level": "IN",
+      "score": 956663,
+      "acc": 96.19,
+      "fc": false,
+      "constant": 15.4
+    },
+    {
+      "id": "Nhelv.Silentroom",
+      "level": "IN",
+      "score": 968830,
+      "acc": 96.72,
+      "fc": false,
+      "constant": 15.6
+    },
+    {
+      "id": "Arkhei.SeraAmagi",
+      "level": "HD",
+      "score": 984250,
+      "acc": 98.25,
+      "fc": true,
+      "constant": 8.8
+    },
+    {
+      "id": "Arkhei.SeraAmagi",
+      "level": "IN",
+      "score": 991540,
+      "acc": 99.06,
+      "fc": true,
+      "constant": 12.6
+    },
+    {
+      "id": "Kerberos.Zris",
+      "level": "HD",
+      "score": 995410,
+      "acc": 99.49,
+      "fc": true,
+      "constant": 12.4
+    },
+    {
+      "id": "Kerberos.Zris",
+      "level": "IN",
+      "score": 934529,
+      "acc": 93.6,
+      "fc": false,
+      "constant": 15.8
+    },
+    {
+      "id": "parsey.siqlo",
+      "level": "IN",
+      "score": 995770,
+      "acc": 99.53,
+      "fc": true,
+      "constant": 14.6
+    },
+    {
+      "id": "Concvssion.Halv",
+      "level": "EZ",
+      "score": 1000000,
+      "acc": 100,
+      "fc": true,
+      "constant": 6
+    },
+    {
+      "id": "Concvssion.Halv",
+      "level": "HD",
+      "score": 983620,
+      "acc": 98.18,
+      "fc": true,
+      "constant": 11.3
+    },
+    {
+      "id": "Concvssion.Halv",
+      "level": "IN",
+      "score": 945929,
+      "acc": 95.24,
+      "fc": false,
+      "constant": 15.6
+    },
+    {
+      "id": "ジングルベルJingleBell.A39沙包P",
+      "level": "IN",
+      "score": 971471,
+      "acc": 98.23,
+      "fc": false,
+      "constant": 14.5
+    },
+    {
+      "id": "TimetoNightSkyfeatLeeYuJin.HyuNKLYDIX",
+      "level": "HD",
+      "score": 973907,
+      "acc": 97.74,
+      "fc": false,
+      "constant": 10.1
+    },
+    {
+      "id": "TimetoNightSkyfeatLeeYuJin.HyuNKLYDIX",
+      "level": "IN",
+      "score": 966944,
+      "acc": 97.53,
+      "fc": false,
+      "constant": 13.6
+    },
+    {
+      "id": "HAZARD.Limpid",
+      "level": "IN",
+      "score": 962774,
+      "acc": 97.08,
+      "fc": false,
+      "constant": 14.8
+    },
+    {
+      "id": "AnotherMe.DAAN",
+      "level": "EZ",
+      "score": 959546,
+      "acc": 96.87,
+      "fc": false,
+      "constant": 5
+    },
+    {
+      "id": "AnotherMe.DAAN",
+      "level": "IN",
+      "score": 949704,
+      "acc": 95.71,
+      "fc": false,
+      "constant": 15.6
+    },
+    {
+      "id": "DontNeverAround.HAMA",
+      "level": "EZ",
+      "score": 980273,
+      "acc": 98.9,
+      "fc": false,
+      "constant": 5
+    },
+    {
+      "id": "DontNeverAround.HAMA",
+      "level": "IN",
+      "score": 955994,
+      "acc": 95.85,
+      "fc": false,
+      "constant": 15.5
+    },
+    {
+      "id": "RESSiSTANCE.ぐるたみん",
+      "level": "EZ",
+      "score": 1000000,
+      "acc": 100,
+      "fc": true,
+      "constant": 6.5
+    },
+    {
+      "id": "RESSiSTANCE.ぐるたみん",
+      "level": "IN",
+      "score": 932337,
+      "acc": 93.31,
+      "fc": false,
+      "constant": 16.1
+    },
+    {
+      "id": "Dreamland.z1onkyrrin",
+      "level": "EZ",
+      "score": 977773,
+      "acc": 98.57,
+      "fc": false,
+      "constant": 7
+    },
+    {
+      "id": "Dreamland.z1onkyrrin",
+      "level": "HD",
+      "score": 975956,
+      "acc": 98.03,
+      "fc": false,
+      "constant": 10.3
+    },
+    {
+      "id": "Dreamland.z1onkyrrin",
+      "level": "IN",
+      "score": 968538,
+      "acc": 97.54,
+      "fc": false,
+      "constant": 13.6
+    },
+    {
+      "id": "AnotherRound.JustinDai",
+      "level": "IN",
+      "score": 960920,
+      "acc": 96.83,
+      "fc": false,
+      "constant": 13.3
+    },
+    {
+      "id": "996.李化禹",
+      "level": "EZ",
+      "score": 975661,
+      "acc": 98.83,
+      "fc": false,
+      "constant": 4
+    },
+    {
+      "id": "996.李化禹",
+      "level": "IN",
+      "score": 970375,
+      "acc": 98,
+      "fc": false,
+      "constant": 14.7
+    },
+    {
+      "id": "FutureMind.RayNauticaRekuMochizuki",
+      "level": "EZ",
+      "score": 981049,
+      "acc": 99.49,
+      "fc": false,
+      "constant": 4.5
+    },
+    {
+      "id": "Luminescent.Daison",
+      "level": "EZ",
+      "score": 1000000,
+      "acc": 100,
+      "fc": true,
+      "constant": 5.5
+    },
+    {
+      "id": "Luminescent.Daison",
+      "level": "IN",
+      "score": 973581,
+      "acc": 97.73,
+      "fc": false,
+      "constant": 14.4
+    },
+    {
+      "id": "FULiAUTOBUSTER.MYUKKE",
+      "level": "EZ",
+      "score": 988576,
+      "acc": 99.45,
+      "fc": false,
+      "constant": 3.5
+    },
+    {
+      "id": "FULiAUTOBUSTER.MYUKKE",
+      "level": "HD",
+      "score": 958142,
+      "acc": 96.74,
+      "fc": false,
+      "constant": 9.7
+    },
+    {
+      "id": "FULiAUTOBUSTER.MYUKKE",
+      "level": "IN",
+      "score": 983786,
+      "acc": 99.35,
+      "fc": false,
+      "constant": 14.6
+    },
+    {
+      "id": "IMustSayNo.TangJuan",
+      "level": "EZ",
+      "score": 974014,
+      "acc": 97.96,
+      "fc": false,
+      "constant": 1.5
+    },
+    {
+      "id": "IMustSayNo.TangJuan",
+      "level": "IN",
+      "score": 1000000,
+      "acc": 100,
+      "fc": true,
+      "constant": 13.5
+    },
+    {
+      "id": "opia.rN",
+      "level": "IN",
+      "score": 936721,
+      "acc": 94.4,
+      "fc": false,
+      "constant": 15.6
+    },
+    {
+      "id": "Apocalypse.アリスシャッハと魔法の楽団",
+      "level": "IN",
+      "score": 996310,
+      "acc": 99.59,
+      "fc": true,
+      "constant": 13.5
+    },
+    {
+      "id": "HorizonBlue.NothingButRequiemfeatAikapinChiyoko",
+      "level": "IN",
+      "score": 935182,
+      "acc": 94.11,
+      "fc": false,
+      "constant": 15.7
+    },
+    {
+      "id": "YouaretheMiserable.tpazolite",
+      "level": "EZ",
+      "score": 1000000,
+      "acc": 100,
+      "fc": true,
+      "constant": 6
+    },
+    {
+      "id": "YouaretheMiserable.tpazolite",
+      "level": "AT",
+      "score": 930377,
+      "acc": 93.75,
+      "fc": false,
+      "constant": 15.8
+    },
+    {
+      "id": "Stasis.Maozon",
+      "level": "EZ",
+      "score": 970173,
+      "acc": 97.7,
+      "fc": false,
+      "constant": 5
+    },
+    {
+      "id": "Stasis.Maozon",
+      "level": "IN",
+      "score": 964229,
+      "acc": 96.49,
+      "fc": false,
+      "constant": 15.3
+    },
+    {
+      "id": "Stasis.Maozon",
+      "level": "AT",
+      "score": 926515,
+      "acc": 93.33,
+      "fc": false,
+      "constant": 16.7
+    },
+    {
+      "id": "いざ参ります.Uskefeat棗いつき",
+      "level": "EZ",
+      "score": 966407,
+      "acc": 97.63,
+      "fc": false,
+      "constant": 3.5
+    },
+    {
+      "id": "いざ参ります.Uskefeat棗いつき",
+      "level": "IN",
+      "score": 986396,
+      "acc": 98.88,
+      "fc": false,
+      "constant": 15
+    },
+    {
+      "id": "月下缭乱.月見静華vsLUNARiUM",
+      "level": "IN",
+      "score": 964396,
+      "acc": 97.31,
+      "fc": false,
+      "constant": 14.9
+    },
+    {
+      "id": "OnAndOn.ETIAfeatJenga",
+      "level": "IN",
+      "score": 951635,
+      "acc": 95.64,
+      "fc": false,
+      "constant": 15.2
+    },
+    {
+      "id": "DataErr0r.Cosmograph",
+      "level": "IN",
+      "score": 973009,
+      "acc": 98.35,
+      "fc": false,
+      "constant": 14.5
+    },
+    {
+      "id": "Shadow.SumaiLightvs姜米條",
+      "level": "EZ",
+      "score": 964535,
+      "acc": 97.06,
+      "fc": false,
+      "constant": 6.5
+    },
+    {
+      "id": "Shadow.SumaiLightvs姜米條",
+      "level": "IN",
+      "score": 984834,
+      "acc": 98.7,
+      "fc": false,
+      "constant": 14.6
+    },
+    {
+      "id": "Shadow.SumaiLightvs姜米條",
+      "level": "AT",
+      "score": 929350,
+      "acc": 92.96,
+      "fc": false,
+      "constant": 16.2
+    },
+    {
+      "id": "心之所向.姜米條",
+      "level": "IN",
+      "score": 968250,
+      "acc": 96.75,
+      "fc": false,
+      "constant": 13.8
+    },
+    {
+      "id": "inferior.姜米條",
+      "level": "EZ",
+      "score": 988480,
+      "acc": 98.72,
+      "fc": true,
+      "constant": 7
+    },
+    {
+      "id": "inferior.姜米條",
+      "level": "HD",
+      "score": 1000000,
+      "acc": 100,
+      "fc": true,
+      "constant": 7.5
+    },
+    {
+      "id": "inferior.姜米條",
+      "level": "IN",
+      "score": 979581,
+      "acc": 98.95,
+      "fc": false,
+      "constant": 14.6
+    },
+    {
+      "id": "csqn.Aoi",
+      "level": "EZ",
+      "score": 971312,
+      "acc": 97.53,
+      "fc": false,
+      "constant": 5
+    },
+    {
+      "id": "csqn.Aoi",
+      "level": "IN",
+      "score": 942223,
+      "acc": 94.3,
+      "fc": false,
+      "constant": 15.9
+    },
+    {
+      "id": "BraveNotes.TurquoiseDRIVENota",
+      "level": "IN",
+      "score": 969783,
+      "acc": 97.28,
+      "fc": false,
+      "constant": 14.6
+    },
+    {
+      "id": "盏茗.茶鸣拾贰律",
+      "level": "EZ",
+      "score": 1000000,
+      "acc": 100,
+      "fc": true,
+      "constant": 1.5
+    },
+    {
+      "id": "盏茗.茶鸣拾贰律",
+      "level": "HD",
+      "score": 977786,
+      "acc": 98,
+      "fc": false,
+      "constant": 4.5
+    },
+    {
+      "id": "盏茗.茶鸣拾贰律",
+      "level": "IN",
+      "score": 989020,
+      "acc": 98.78,
+      "fc": true,
+      "constant": 13.4
+    },
+    {
+      "id": "青芽.茶鸣拾贰律",
+      "level": "IN",
+      "score": 945516,
+      "acc": 95.53,
+      "fc": false,
+      "constant": 15.2
+    },
+    {
+      "id": "EternalSnow.AbyssIdols",
+      "level": "HD",
+      "score": 967259,
+      "acc": 98,
+      "fc": false,
+      "constant": 9.6
+    },
+    {
+      "id": "EternalSnow.AbyssIdols",
+      "level": "IN",
+      "score": 970888,
+      "acc": 96.83,
+      "fc": false,
+      "constant": 13.5
+    },
+    {
+      "id": "RainySeason.AbyssIdols",
+      "level": "IN",
+      "score": 987408,
+      "acc": 99.44,
+      "fc": false,
+      "constant": 14.2
+    },
+    {
+      "id": "ElCondorPasaPhigrosEdit.PlasticFruits",
+      "level": "HD",
+      "score": 966711,
+      "acc": 97.89,
+      "fc": false,
+      "constant": 12.5
+    },
+    {
+      "id": "ElCondorPasaPhigrosEdit.PlasticFruits",
+      "level": "IN",
+      "score": 966007,
+      "acc": 96.44,
+      "fc": false,
+      "constant": 15.6
+    },
+    {
+      "id": "BreakOver.Kforest",
+      "level": "EZ",
+      "score": 962396,
+      "acc": 97.12,
+      "fc": false,
+      "constant": 5
+    },
+    {
+      "id": "BreakOver.Kforest",
+      "level": "HD",
+      "score": 990460,
+      "acc": 98.94,
+      "fc": true,
+      "constant": 11.5
+    },
+    {
+      "id": "BreakOver.Kforest",
+      "level": "IN",
+      "score": 990541,
+      "acc": 99.51,
+      "fc": false,
+      "constant": 14.1
+    },
+    {
+      "id": "BreakOver.Kforest",
+      "level": "AT",
+      "score": 975396,
+      "acc": 98.56,
+      "fc": false,
+      "constant": 14.9
+    },
+    {
+      "id": "BelieveLightfeat果丸哒呦.ScalerMestie果丸哒呦",
+      "level": "EZ",
+      "score": 1000000,
+      "acc": 100,
+      "fc": true,
+      "constant": 2.5
+    },
+    {
+      "id": "BelieveLightfeat果丸哒呦.ScalerMestie果丸哒呦",
+      "level": "HD",
+      "score": 991900,
+      "acc": 99.1,
+      "fc": true,
+      "constant": 8.9
+    },
+    {
+      "id": "BelieveLightfeat果丸哒呦.ScalerMestie果丸哒呦",
+      "level": "IN",
+      "score": 988157,
+      "acc": 99.51,
+      "fc": false,
+      "constant": 14.6
+    },
+    {
+      "id": "青丘.BLACK0",
+      "level": "EZ",
+      "score": 995500,
+      "acc": 99.5,
+      "fc": true,
+      "constant": 5.5
+    },
+    {
+      "id": "青丘.BLACK0",
+      "level": "HD",
+      "score": 967754,
+      "acc": 97.15,
+      "fc": false,
+      "constant": 10.5
+    },
+    {
+      "id": "青丘.BLACK0",
+      "level": "IN",
+      "score": 936180,
+      "acc": 94.07,
+      "fc": false,
+      "constant": 15.5
+    },
+    {
+      "id": "瓷岁.茶鸣拾贰律",
+      "level": "IN",
+      "score": 984896,
+      "acc": 98.59,
+      "fc": false,
+      "constant": 7
+    },
+    {
+      "id": "Feast远东之宴.茶鸣拾贰律",
+      "level": "IN",
+      "score": 933460,
+      "acc": 93.88,
+      "fc": false,
+      "constant": 15.6
+    },
+    {
+      "id": "インフェルノシティ.Ponchifeatはぁち",
+      "level": "HD",
+      "score": 982894,
+      "acc": 98.4,
+      "fc": false,
+      "constant": 11.5
+    },
+    {
+      "id": "Upshift.Iriss-Frantzz",
+      "level": "EZ",
+      "score": 1000000,
+      "acc": 100,
+      "fc": true,
+      "constant": 6
+    },
+    {
+      "id": "Upshift.Iriss-Frantzz",
+      "level": "HD",
+      "score": 975958,
+      "acc": 97.77,
+      "fc": false,
+      "constant": 10.8
+    },
+    {
+      "id": "Upshift.Iriss-Frantzz",
+      "level": "IN",
+      "score": 947949,
+      "acc": 95.68,
+      "fc": false,
+      "constant": 15.5
+    },
+    {
+      "id": "PoisonANDORAffection.LeaF",
+      "level": "IN",
+      "score": 944393,
+      "acc": 94.6,
+      "fc": false,
+      "constant": 15.7
+    },
+    {
+      "id": "Random.SobremSilentroom",
+      "level": "HD",
+      "score": 1000000,
+      "acc": 100,
+      "fc": true,
+      "constant": 12.2
+    },
+    {
+      "id": "零號車輛.seatrus",
+      "level": "EZ",
+      "score": 985870,
+      "acc": 98.43,
+      "fc": true,
+      "constant": 7.5
+    },
+    {
+      "id": "零號車輛.seatrus",
+      "level": "IN",
+      "score": 948901,
+      "acc": 95.15,
+      "fc": false,
+      "constant": 16.2
+    },
+    {
+      "id": "NowIsTheTimeDoIt.RoyMikelate",
+      "level": "EZ",
+      "score": 993621,
+      "acc": 99.58,
+      "fc": false,
+      "constant": 4.5
+    },
+    {
+      "id": "NowIsTheTimeDoIt.RoyMikelate",
+      "level": "IN",
+      "score": 980992,
+      "acc": 99.12,
+      "fc": false,
+      "constant": 14.3
+    },
+    {
+      "id": "Bougainvillea.Jade",
+      "level": "IN",
+      "score": 1000000,
+      "acc": 100,
+      "fc": true,
+      "constant": 13.2
+    },
+    {
+      "id": "神話.PicaM2U",
+      "level": "HD",
+      "score": 976942,
+      "acc": 98.63,
+      "fc": false,
+      "constant": 8.7
+    },
+    {
+      "id": "神話.PicaM2U",
+      "level": "IN",
+      "score": 986454,
+      "acc": 99.41,
+      "fc": false,
+      "constant": 13.5
+    },
+    {
+      "id": "Elúltimobaile.Θ",
+      "level": "EZ",
+      "score": 966991,
+      "acc": 97.64,
+      "fc": false,
+      "constant": 4.5
+    },
+    {
+      "id": "Elúltimobaile.Θ",
+      "level": "IN",
+      "score": 972170,
+      "acc": 98.05,
+      "fc": false,
+      "constant": 14.1
+    },
+    {
+      "id": "Trojan.litmus",
+      "level": "HD",
+      "score": 1000000,
+      "acc": 100,
+      "fc": true,
+      "constant": 10.8
+    },
+    {
+      "id": "Trojan.litmus",
+      "level": "IN",
+      "score": 992350,
+      "acc": 99.15,
+      "fc": true,
+      "constant": 15
+    },
+    {
+      "id": "TemporalShifting.LureRabbitVC",
+      "level": "HD",
+      "score": 982255,
+      "acc": 98.98,
+      "fc": false,
+      "constant": 11.5
+    },
+    {
+      "id": "TemporalShifting.LureRabbitVC",
+      "level": "IN",
+      "score": 948752,
+      "acc": 95.13,
+      "fc": false,
+      "constant": 15.2
+    },
+    {
+      "id": "Adastraperaspera.RabbitHouse",
+      "level": "EZ",
+      "score": 974036,
+      "acc": 97.81,
+      "fc": false,
+      "constant": 6.5
+    },
+    {
+      "id": "Adastraperaspera.RabbitHouse",
+      "level": "IN",
+      "score": 941628,
+      "acc": 95.1,
+      "fc": false,
+      "constant": 16.3
+    },
+    {
+      "id": "Ajourneytothemoonlight.Yesod",
+      "level": "IN",
+      "score": 969900,
+      "acc": 97.16,
+      "fc": false,
+      "constant": 14.5
+    },
+    {
+      "id": "RainyHeart.BelieverInYou阿卡姆巫师",
+      "level": "HD",
+      "score": 967151,
+      "acc": 96.76,
+      "fc": false,
+      "constant": 9.4
+    },
+    {
+      "id": "RainyHeart.BelieverInYou阿卡姆巫师",
+      "level": "IN",
+      "score": 992800,
+      "acc": 99.2,
+      "fc": true,
+      "constant": 12.9
+    },
+    {
+      "id": "Realms.HinkikAHimitsu",
+      "level": "EZ",
+      "score": 994330,
+      "acc": 99.37,
+      "fc": true,
+      "constant": 3.5
+    },
+    {
+      "id": "Realms.HinkikAHimitsu",
+      "level": "IN",
+      "score": 961754,
+      "acc": 96.77,
+      "fc": false,
+      "constant": 13.8
+    },
+    {
+      "id": "ぱぴぷぴぷぴぱ.ころねぽちWith立秋",
+      "level": "EZ",
+      "score": 980547,
+      "acc": 98.77,
+      "fc": false,
+      "constant": 5
+    },
+    {
+      "id": "ぱぴぷぴぷぴぱ.ころねぽちWith立秋",
+      "level": "HD",
+      "score": 977267,
+      "acc": 98.22,
+      "fc": false,
+      "constant": 12.3
+    },
+    {
+      "id": "ぱぴぷぴぷぴぱ.ころねぽちWith立秋",
+      "level": "IN",
+      "score": 928296,
+      "acc": 93.55,
+      "fc": false,
+      "constant": 15.9
+    },
+    {
+      "id": "TriumphRegret.typeMARS",
+      "level": "EZ",
+      "score": 971715,
+      "acc": 97.46,
+      "fc": false,
+      "constant": 5
+    },
+    {
+      "id": "SATELLITE.かめりあ",
+      "level": "IN",
+      "score": 973482,
+      "acc": 97.93,
+      "fc": false,
+      "constant": 14.3
+    },
+    {
+      "id": "SATELLITE.かめりあ",
+      "level": "AT",
+      "score": 948666,
+      "acc": 95.02,
+      "fc": false,
+      "constant": 16.2
+    },
+    {
+      "id": "DancewithSilence.かめりあ",
+      "level": "EZ",
+      "score": 987243,
+      "acc": 99.27,
+      "fc": false,
+      "constant": 7
+    },
+    {
+      "id": "DancewithSilence.かめりあ",
+      "level": "IN",
+      "score": 970861,
+      "acc": 96.99,
+      "fc": false,
+      "constant": 15.2
+    },
+    {
+      "id": "LabyrinthinKowloonWalledWorld.かめりあ",
+      "level": "EZ",
+      "score": 964719,
+      "acc": 97.64,
+      "fc": false,
+      "constant": 6
+    },
+    {
+      "id": "LabyrinthinKowloonWalledWorld.かめりあ",
+      "level": "IN",
+      "score": 968151,
+      "acc": 96.52,
+      "fc": false,
+      "constant": 15.6
+    },
+    {
+      "id": "ComputeItWithSomeDevilishAlcoholicSteampunkEngines.かめりあ",
+      "level": "HD",
+      "score": 962587,
+      "acc": 96.73,
+      "fc": false,
+      "constant": 10.6
+    },
+    {
+      "id": "ComputeItWithSomeDevilishAlcoholicSteampunkEngines.かめりあ",
+      "level": "IN",
+      "score": 966336,
+      "acc": 96.43,
+      "fc": false,
+      "constant": 15.7
+    },
+    {
+      "id": "ERABYECONNEC10N.かめりあ",
+      "level": "EZ",
+      "score": 1000000,
+      "acc": 100,
+      "fc": true,
+      "constant": 5.5
+    },
+    {
+      "id": "ERABYECONNEC10N.かめりあ",
+      "level": "HD",
+      "score": 966049,
+      "acc": 96.47,
+      "fc": false,
+      "constant": 11.6
+    },
+    {
+      "id": "ERABYECONNEC10N.かめりあ",
+      "level": "IN",
+      "score": 936736,
+      "acc": 93.86,
+      "fc": false,
+      "constant": 16.3
+    },
+    {
+      "id": "ERABYECONNEC10N.かめりあ",
+      "level": "AT",
+      "score": 913301,
+      "acc": 91.81,
+      "fc": false,
+      "constant": 17.3
+    },
+    {
+      "id": "DiamondEyes.SYNTHETIC",
+      "level": "EZ",
+      "score": 964674,
+      "acc": 97.49,
+      "fc": false,
+      "constant": 3.5
+    },
+    {
+      "id": "DiamondEyes.SYNTHETIC",
+      "level": "HD",
+      "score": 960465,
+      "acc": 96.42,
+      "fc": false,
+      "constant": 6.5
+    },
+    {
+      "id": "Bitterblossom.imvi",
+      "level": "IN",
+      "score": 968040,
+      "acc": 97.8,
+      "fc": false,
+      "constant": 13.5
+    },
+    {
+      "id": "SilenceisGoldenSpeechisGolden.NIWASHI",
+      "level": "EZ",
+      "score": 986680,
+      "acc": 98.52,
+      "fc": true,
+      "constant": 5
+    },
+    {
+      "id": "SilenceisGoldenSpeechisGolden.NIWASHI",
+      "level": "IN",
+      "score": 948584,
+      "acc": 94.8,
+      "fc": false,
+      "constant": 15.7
+    },
+    {
+      "id": "FracturedAngel.DJRaisei",
+      "level": "HD",
+      "score": 984880,
+      "acc": 98.32,
+      "fc": true,
+      "constant": 10.9
+    },
+    {
+      "id": "FracturedAngel.DJRaisei",
+      "level": "IN",
+      "score": 927200,
+      "acc": 92.93,
+      "fc": false,
+      "constant": 16.3
+    },
+    {
+      "id": "JourneywithYou.Iris",
+      "level": "HD",
+      "score": 974828,
+      "acc": 98.25,
+      "fc": false,
+      "constant": 10
+    },
+    {
+      "id": "SecretIllumination.Yooh",
+      "level": "IN",
+      "score": 991630,
+      "acc": 99.07,
+      "fc": true,
+      "constant": 14.7
+    },
+    {
+      "id": "InvertedWorld.ARForest",
+      "level": "EZ",
+      "score": 1000000,
+      "acc": 100,
+      "fc": true,
+      "constant": 5.5
+    },
+    {
+      "id": "InvertedWorld.ARForest",
+      "level": "HD",
+      "score": 964303,
+      "acc": 96.89,
+      "fc": false,
+      "constant": 11.2
+    },
+    {
+      "id": "月詠に鳴る.Feryquitousfeat藍月なくる",
+      "level": "HD",
+      "score": 992530,
+      "acc": 99.17,
+      "fc": true,
+      "constant": 11.4
+    },
+    {
+      "id": "月詠に鳴る.Feryquitousfeat藍月なくる",
+      "level": "IN",
+      "score": 955978,
+      "acc": 96.57,
+      "fc": false,
+      "constant": 14.5
+    },
+    {
+      "id": "月詠に鳴る.Feryquitousfeat藍月なくる",
+      "level": "AT",
+      "score": 957383,
+      "acc": 95.73,
+      "fc": false,
+      "constant": 15.7
+    },
+    {
+      "id": "TECHNOPOLIS2085.PRASTIKDANCEFLOOR",
+      "level": "EZ",
+      "score": 973887,
+      "acc": 98.41,
+      "fc": false,
+      "constant": 5
+    },
+    {
+      "id": "TECHNOPOLIS2085.PRASTIKDANCEFLOOR",
+      "level": "HD",
+      "score": 1000000,
+      "acc": 100,
+      "fc": true,
+      "constant": 10.2
+    },
+    {
+      "id": "TECHNOPOLIS2085.PRASTIKDANCEFLOOR",
+      "level": "IN",
+      "score": 987088,
+      "acc": 98.63,
+      "fc": false,
+      "constant": 14.1
+    },
+    {
+      "id": "TECHNOPOLIS2085.PRASTIKDANCEFLOOR",
+      "level": "AT",
+      "score": 948041,
+      "acc": 94.59,
+      "fc": false,
+      "constant": 15.9
+    },
+    {
+      "id": "祈-我ら神祖と共に歩む者なり-.光吉猛修VS穴山大輔VSKaiVS水野健治VS大国奏音",
+      "level": "AT",
+      "score": 918548,
+      "acc": 91.68,
+      "fc": false,
+      "constant": 17.3
+    },
+    {
+      "id": "bye.DingerBox",
+      "level": "EZ",
+      "score": 1000000,
+      "acc": 100,
+      "fc": true,
+      "constant": 4
+    },
+    {
+      "id": "聖夜讃歌.A39沙包P",
+      "level": "HD",
+      "score": 989290,
+      "acc": 98.81,
+      "fc": true,
+      "constant": 10.1
+    },
+    {
+      "id": "聖夜讃歌.A39沙包P",
+      "level": "IN",
+      "score": 970673,
+      "acc": 96.89,
+      "fc": false,
+      "constant": 15.2
+    },
+    {
+      "id": "ストレイソウルアラウンド.みーに",
+      "level": "EZ",
+      "score": 1000000,
+      "acc": 100,
+      "fc": true,
+      "constant": 6
+    },
+    {
+      "id": "ストレイソウルアラウンド.みーに",
+      "level": "HD",
+      "score": 968331,
+      "acc": 97.27,
+      "fc": false,
+      "constant": 9.8
+    },
+    {
+      "id": "KMoeVIP.ZxNX",
+      "level": "IN",
+      "score": 944244,
+      "acc": 94.81,
+      "fc": false,
+      "constant": 15.9
+    },
+    {
+      "id": "GVNGlitterVomitusandNeon.SaltySaltUnfold33",
+      "level": "EZ",
+      "score": 965445,
+      "acc": 97.58,
+      "fc": false,
+      "constant": 5
+    },
+    {
+      "id": "GVNGlitterVomitusandNeon.SaltySaltUnfold33",
+      "level": "HD",
+      "score": 1000000,
+      "acc": 100,
+      "fc": true,
+      "constant": 9.9
+    },
+    {
+      "id": "GVNGlitterVomitusandNeon.SaltySaltUnfold33",
+      "level": "IN",
+      "score": 932596,
+      "acc": 94.16,
+      "fc": false,
+      "constant": 15.8
+    },
+    {
+      "id": "CrushBETA.shadow_bling",
+      "level": "EZ",
+      "score": 984160,
+      "acc": 98.24,
+      "fc": true,
+      "constant": 4
+    },
+    {
+      "id": "CrushBETA.shadow_bling",
+      "level": "HD",
+      "score": 972517,
+      "acc": 98.39,
+      "fc": false,
+      "constant": 10.5
+    },
+    {
+      "id": "CrushBETA.shadow_bling",
+      "level": "IN",
+      "score": 963521,
+      "acc": 96.13,
+      "fc": false,
+      "constant": 15.1
+    },
+    {
+      "id": "BrokenSky.JungoMAX3feat刘佳宜Snow幻影刃shadow",
+      "level": "HD",
+      "score": 964080,
+      "acc": 96.91,
+      "fc": false,
+      "constant": 8.6
+    },
+    {
+      "id": "BrokenSky.JungoMAX3feat刘佳宜Snow幻影刃shadow",
+      "level": "IN",
+      "score": 965435,
+      "acc": 97.4,
+      "fc": false,
+      "constant": 13.3
+    },
+    {
+      "id": "Xenolith.Tatsh",
+      "level": "HD",
+      "score": 973762,
+      "acc": 97.59,
+      "fc": false,
+      "constant": 8.5
+    },
+    {
+      "id": "ArtificialExistence.JunKuroda",
+      "level": "EZ",
+      "score": 1000000,
+      "acc": 100,
+      "fc": true,
+      "constant": 3.5
+    },
+    {
+      "id": "ArtificialExistence.JunKuroda",
+      "level": "IN",
+      "score": 971449,
+      "acc": 97.6,
+      "fc": false,
+      "constant": 14.7
+    },
+    {
+      "id": "IndelibleScar.Noah",
+      "level": "IN",
+      "score": 952009,
+      "acc": 95.41,
+      "fc": false,
+      "constant": 15.3
+    },
+    {
+      "id": "IndelibleScar.Noah",
+      "level": "AT",
+      "score": 939008,
+      "acc": 93.45,
+      "fc": false,
+      "constant": 16.5
+    },
+    {
+      "id": "Antithese.Blacklolita",
+      "level": "EZ",
+      "score": 1000000,
+      "acc": 100,
+      "fc": true,
+      "constant": 4.5
+    },
+    {
+      "id": "Antithese.Blacklolita",
+      "level": "IN",
+      "score": 945844,
+      "acc": 94.1,
+      "fc": false,
+      "constant": 15.4
+    },
+    {
+      "id": "Antithese.Blacklolita",
+      "level": "AT",
+      "score": 946401,
+      "acc": 94.53,
+      "fc": false,
+      "constant": 16.4
+    },
+    {
+      "id": "PRAGMATISMRESURRECTION.Laur",
+      "level": "IN",
+      "score": 959970,
+      "acc": 95.77,
+      "fc": false,
+      "constant": 16
+    },
+    {
+      "id": "PRAGMATISMRESURRECTION.Laur",
+      "level": "AT",
+      "score": 929719,
+      "acc": 93.13,
+      "fc": false,
+      "constant": 16.6
+    },
+    {
+      "id": "ShineAfter.ADeanJocularACE",
+      "level": "EZ",
+      "score": 971167,
+      "acc": 97.84,
+      "fc": false,
+      "constant": 4
+    },
+    {
+      "id": "ShineAfter.ADeanJocularACE",
+      "level": "HD",
+      "score": 980981,
+      "acc": 98.19,
+      "fc": false,
+      "constant": 9.7
+    },
+    {
+      "id": "ShineAfter.ADeanJocularACE",
+      "level": "IN",
+      "score": 983170,
+      "acc": 98.13,
+      "fc": true,
+      "constant": 14.6
+    },
+    {
+      "id": "Bloom.targ麻团qwq",
+      "level": "HD",
+      "score": 977175,
+      "acc": 98.55,
+      "fc": false,
+      "constant": 11.2
+    },
+    {
+      "id": "Bloom.targ麻团qwq",
+      "level": "IN",
+      "score": 983322,
+      "acc": 99.38,
+      "fc": false,
+      "constant": 14.9
+    },
+    {
+      "id": "幽世桔梗.Capchiifeatまるもこ",
+      "level": "EZ",
+      "score": 983333,
+      "acc": 98.37,
+      "fc": false,
+      "constant": 4.5
+    },
+    {
+      "id": "幽世桔梗.Capchiifeatまるもこ",
+      "level": "HD",
+      "score": 967500,
+      "acc": 96.83,
+      "fc": false,
+      "constant": 10.1
+    },
+    {
+      "id": "幽世桔梗.Capchiifeatまるもこ",
+      "level": "IN",
+      "score": 986680,
+      "acc": 98.52,
+      "fc": true,
+      "constant": 14.8
+    },
+    {
+      "id": "千紫万紅.r0yvsWABI",
+      "level": "HD",
+      "score": 1000000,
+      "acc": 100,
+      "fc": true,
+      "constant": 12.1
+    },
+    {
+      "id": "千紫万紅.r0yvsWABI",
+      "level": "IN",
+      "score": 965820,
+      "acc": 96.68,
+      "fc": false,
+      "constant": 15.5
+    },
+    {
+      "id": "明鏡烈火.MUEvsRekuMochizuki",
+      "level": "IN",
+      "score": 927424,
+      "acc": 93.05,
+      "fc": false,
+      "constant": 15.9
+    },
+    {
+      "id": "今天不是明天.PIKASONICfeat兰音Reine",
+      "level": "EZ",
+      "score": 1000000,
+      "acc": 100,
+      "fc": true,
+      "constant": 2.5
+    },
+    {
+      "id": "今天不是明天.PIKASONICfeat兰音Reine",
+      "level": "IN",
+      "score": 962033,
+      "acc": 96.6,
+      "fc": false,
+      "constant": 13.4
+    },
+    {
+      "id": "Cuvism.Fl00tvsHalv",
+      "level": "EZ",
+      "score": 992298,
+      "acc": 99.43,
+      "fc": false,
+      "constant": 3
+    },
+    {
+      "id": "Cuvism.Fl00tvsHalv",
+      "level": "HD",
+      "score": 1000000,
+      "acc": 100,
+      "fc": true,
+      "constant": 12.2
+    },
+    {
+      "id": "Cuvism.Fl00tvsHalv",
+      "level": "IN",
+      "score": 991090,
+      "acc": 99.01,
+      "fc": true,
+      "constant": 13.9
+    },
+    {
+      "id": "Cuvism.Fl00tvsHalv",
+      "level": "AT",
+      "score": 939427,
+      "acc": 94.09,
+      "fc": false,
+      "constant": 16.7
+    },
+    {
+      "id": "iLArtifact.Link0",
+      "level": "IN",
+      "score": 942060,
+      "acc": 95.14,
+      "fc": false,
+      "constant": 15.7
+    },
+    {
+      "id": "atruthseekerCommunicationwithUtopiawillbelost.kuro",
+      "level": "IN",
+      "score": 939930,
+      "acc": 93.76,
+      "fc": false,
+      "constant": 15.7
+    },
+    {
+      "id": "BoundedQuietude.FiniteLimitvsSiLiS",
+      "level": "EZ",
+      "score": 972373,
+      "acc": 98.44,
+      "fc": false,
+      "constant": 7
+    },
+    {
+      "id": "BoundedQuietude.FiniteLimitvsSiLiS",
+      "level": "HD",
+      "score": 983947,
+      "acc": 98.56,
+      "fc": false,
+      "constant": 7.5
+    },
+    {
+      "id": "BoundedQuietude.FiniteLimitvsSiLiS",
+      "level": "IN",
+      "score": 942247,
+      "acc": 94.86,
+      "fc": false,
+      "constant": 16.2
+    },
+    {
+      "id": "君往何处QuoVadis.M2U",
+      "level": "EZ",
+      "score": 1000000,
+      "acc": 100,
+      "fc": true,
+      "constant": 4
+    },
+    {
+      "id": "君往何处QuoVadis.M2U",
+      "level": "IN",
+      "score": 968408,
+      "acc": 98.05,
+      "fc": false,
+      "constant": 14.1
+    },
+    {
+      "id": "暗夜苏醒REANIMATE.Warak",
+      "level": "HD",
+      "score": 978152,
+      "acc": 98.83,
+      "fc": false,
+      "constant": 12.8
+    },
+    {
+      "id": "暗夜苏醒REANIMATE.Warak",
+      "level": "IN",
+      "score": 965286,
+      "acc": 96.64,
+      "fc": false,
+      "constant": 15.3
+    },
+    {
+      "id": "Grimheart.Puru",
+      "level": "IN",
+      "score": 994420,
+      "acc": 99.38,
+      "fc": true,
+      "constant": 13.8
+    },
+    {
+      "id": "Thrashforce.KAHvsE0ri4",
+      "level": "EZ",
+      "score": 987175,
+      "acc": 99.17,
+      "fc": false,
+      "constant": 4.5
+    },
+    {
+      "id": "Thrashforce.KAHvsE0ri4",
+      "level": "IN",
+      "score": 944174,
+      "acc": 95.15,
+      "fc": false,
+      "constant": 15.3
+    },
+    {
+      "id": "Originally.SNKSMizku",
+      "level": "EZ",
+      "score": 966016,
+      "acc": 97.3,
+      "fc": false,
+      "constant": 1
+    },
+    {
+      "id": "Originally.SNKSMizku",
+      "level": "IN",
+      "score": 965602,
+      "acc": 96.6,
+      "fc": false,
+      "constant": 14.5
+    },
+    {
+      "id": "黄金之城GOLDTOWN.Memme",
+      "level": "HD",
+      "score": 967295,
+      "acc": 97.33,
+      "fc": false,
+      "constant": 10.2
+    },
+    {
+      "id": "双重间谍DoubleAgent.WAVAV",
+      "level": "EZ",
+      "score": 1000000,
+      "acc": 100,
+      "fc": true,
+      "constant": 4.5
+    },
+    {
+      "id": "幻影鬼魅PLEASE.R300K",
+      "level": "IN",
+      "score": 964188,
+      "acc": 96.58,
+      "fc": false,
+      "constant": 15.2
+    },
+    {
+      "id": "幻影鬼魅PLEASE.R300K",
+      "level": "AT",
+      "score": 909368,
+      "acc": 91.06,
+      "fc": false,
+      "constant": 17
+    },
+    {
+      "id": "Schadenfreude.ZxNX",
+      "level": "IN",
+      "score": 950642,
+      "acc": 94.9,
+      "fc": false,
+      "constant": 15.1
+    },
+    {
+      "id": "Letempsperdu.Daison",
+      "level": "HD",
+      "score": 973090,
+      "acc": 97.3,
+      "fc": false,
+      "constant": 9
+    },
+    {
+      "id": "Letempsperdu.Daison",
+      "level": "IN",
+      "score": 1000000,
+      "acc": 100,
+      "fc": true,
+      "constant": 12.3
+    },
+    {
+      "id": "FixationsTowardtheStars.Foodbot",
+      "level": "EZ",
+      "score": 973342,
+      "acc": 97.68,
+      "fc": false,
+      "constant": 3.5
+    },
+    {
+      "id": "FixationsTowardtheStars.Foodbot",
+      "level": "HD",
+      "score": 976099,
+      "acc": 97.59,
+      "fc": false,
+      "constant": 10.9
+    },
+    {
+      "id": "FixationsTowardtheStars.Foodbot",
+      "level": "IN",
+      "score": 983350,
+      "acc": 98.15,
+      "fc": true,
+      "constant": 14.5
+    },
+    {
+      "id": "valorstarcross.LundyvsWyvren",
+      "level": "IN",
+      "score": 933982,
+      "acc": 93.25,
+      "fc": false,
+      "constant": 15.8
+    },
+    {
+      "id": "CometFeat符白牙.CNHKSS",
+      "level": "HD",
+      "score": 993700,
+      "acc": 99.3,
+      "fc": true,
+      "constant": 10.5
+    },
+    {
+      "id": "白と黒のバケモノ.テヅカ",
+      "level": "EZ",
+      "score": 977452,
+      "acc": 98.19,
+      "fc": false,
+      "constant": 4
+    },
+    {
+      "id": "白と黒のバケモノ.テヅカ",
+      "level": "IN",
+      "score": 935355,
+      "acc": 94.09,
+      "fc": false,
+      "constant": 15.9
+    },
+    {
+      "id": "Devotion.Connexio",
+      "level": "HD",
+      "score": 977622,
+      "acc": 97.66,
+      "fc": false,
+      "constant": 9.6
+    },
+    {
+      "id": "Devotion.Connexio",
+      "level": "IN",
+      "score": 988120,
+      "acc": 98.68,
+      "fc": true,
+      "constant": 13.7
+    },
+    {
+      "id": "KirakiraNoelStory.RekuMochizuki",
+      "level": "EZ",
+      "score": 983844,
+      "acc": 98.7,
+      "fc": false,
+      "constant": 4
+    },
+    {
+      "id": "KirakiraNoelStory.RekuMochizuki",
+      "level": "IN",
+      "score": 990370,
+      "acc": 98.93,
+      "fc": true,
+      "constant": 14.2
+    },
+    {
+      "id": "Shelter.MeatyRabbitNceS",
+      "level": "HD",
+      "score": 989936,
+      "acc": 99.07,
+      "fc": false,
+      "constant": 8.8
+    },
+    {
+      "id": "Shelter.MeatyRabbitNceS",
+      "level": "IN",
+      "score": 959747,
+      "acc": 96.42,
+      "fc": false,
+      "constant": 13.2
+    },
+    {
+      "id": "蝎虎天体Lacertid.CreamvsDaily天利",
+      "level": "EZ",
+      "score": 1000000,
+      "acc": 100,
+      "fc": true,
+      "constant": 4.5
+    },
+    {
+      "id": "蝎虎天体Lacertid.CreamvsDaily天利",
+      "level": "IN",
+      "score": 963001,
+      "acc": 96.75,
+      "fc": false,
+      "constant": 15.5
+    },
+    {
+      "id": "インマイマインド.レシオP",
+      "level": "IN",
+      "score": 1000000,
+      "acc": 100,
+      "fc": true,
+      "constant": 12.5
+    },
+    {
+      "id": "ニライカナイNiraicA_naiMix.roopfromSTR",
+      "level": "HD",
+      "score": 1000000,
+      "acc": 100,
+      "fc": true,
+      "constant": 8.3
+    },
+    {
+      "id": "ニライカナイNiraicA_naiMix.roopfromSTR",
+      "level": "IN",
+      "score": 1000000,
+      "acc": 100,
+      "fc": true,
+      "constant": 13.5
+    },
+    {
+      "id": "SwingSkipDrop.ミハイル",
+      "level": "IN",
+      "score": 949791,
+      "acc": 94.65,
+      "fc": false,
+      "constant": 15.5
+    },
+    {
+      "id": "宇宙残骸少女CosmicDustyGirl.辻原一郎",
+      "level": "EZ",
+      "score": 964697,
+      "acc": 97.74,
+      "fc": false,
+      "constant": 6
+    },
+    {
+      "id": "宇宙残骸少女CosmicDustyGirl.辻原一郎",
+      "level": "HD",
+      "score": 1000000,
+      "acc": 100,
+      "fc": true,
+      "constant": 10.2
+    },
+    {
+      "id": "LuminousEntitiesLostHeart.NormalMfeatUsagiDenki",
+      "level": "HD",
+      "score": 957208,
+      "acc": 96.44,
+      "fc": false,
+      "constant": 10.7
+    },
+    {
+      "id": "LuminousEntitiesLostHeart.NormalMfeatUsagiDenki",
+      "level": "IN",
+      "score": 958975,
+      "acc": 96.57,
+      "fc": false,
+      "constant": 15.2
+    },
+    {
+      "id": "KIZUNAResolution.TAG",
+      "level": "EZ",
+      "score": 961185,
+      "acc": 96.99,
+      "fc": false,
+      "constant": 8
+    },
+    {
+      "id": "AbsoluTedisoRdeR.AcuteDisarray",
+      "level": "AT",
+      "score": 901314,
+      "acc": 90.48,
+      "fc": false,
+      "constant": 17.2
+    },
+    {
+      "id": "AphroditesChildshortver.RUQOA",
+      "level": "EZ",
+      "score": 963686,
+      "acc": 96.46,
+      "fc": false,
+      "constant": 3.5
+    },
+    {
+      "id": "DevIAtiOnshortver.polysha",
+      "level": "HD",
+      "score": 984520,
+      "acc": 98.28,
+      "fc": true,
+      "constant": 11.1
+    },
+    {
+      "id": "DevIAtiOnshortver.polysha",
+      "level": "IN",
+      "score": 929138,
+      "acc": 93.79,
+      "fc": false,
+      "constant": 15.8
+    },
+    {
+      "id": "NOx.Juggernaut",
+      "level": "HD",
+      "score": 1000000,
+      "acc": 100,
+      "fc": true,
+      "constant": 10.1
+    },
+    {
+      "id": "NOx.Juggernaut",
+      "level": "IN",
+      "score": 929596,
+      "acc": 93.33,
+      "fc": false,
+      "constant": 16.1
+    },
+    {
+      "id": "Aliceinaxxxxxxxx.Nagiha",
+      "level": "HD",
+      "score": 981216,
+      "acc": 99.21,
+      "fc": false,
+      "constant": 9.5
+    },
+    {
+      "id": "Aliceinaxxxxxxxx.Nagiha",
+      "level": "IN",
+      "score": 957012,
+      "acc": 96.31,
+      "fc": false,
+      "constant": 15.8
+    },
+    {
+      "id": "Radiance.Nhato",
+      "level": "IN",
+      "score": 977380,
+      "acc": 98.23,
+      "fc": false,
+      "constant": 14.1
+    },
+    {
+      "id": "Radiance.Nhato",
+      "level": "AT",
+      "score": 937265,
+      "acc": 94.16,
+      "fc": false,
+      "constant": 15.6
+    },
+    {
+      "id": "DiamondDust.MasahiroGodspeedAoki",
+      "level": "EZ",
+      "score": 984340,
+      "acc": 98.26,
+      "fc": true,
+      "constant": 5
+    },
+    {
+      "id": "DiamondDust.MasahiroGodspeedAoki",
+      "level": "IN",
+      "score": 935404,
+      "acc": 94.43,
+      "fc": false,
+      "constant": 15.3
+    },
+    {
+      "id": "DiamondDust.MasahiroGodspeedAoki",
+      "level": "AT",
+      "score": 925385,
+      "acc": 92.28,
+      "fc": false,
+      "constant": 16.7
+    },
+    {
+      "id": "StardustRAY.kanonevsBlackY",
+      "level": "IN",
+      "score": 947036,
+      "acc": 94.75,
+      "fc": false,
+      "constant": 16.5
+    },
+    {
+      "id": "StardustRAY.kanonevsBlackY",
+      "level": "AT",
+      "score": 927013,
+      "acc": 93.14,
+      "fc": false,
+      "constant": 17.2
+    },
+    {
+      "id": "FrozenHeart.A39沙包P",
+      "level": "IN",
+      "score": 980909,
+      "acc": 98.12,
+      "fc": false,
+      "constant": 14.6
+    },
+    {
+      "id": "Helios.NOABotaNya",
+      "level": "HD",
+      "score": 990640,
+      "acc": 98.96,
+      "fc": true,
+      "constant": 9.1
+    },
+    {
+      "id": "Helios.NOABotaNya",
+      "level": "IN",
+      "score": 969238,
+      "acc": 98,
+      "fc": false,
+      "constant": 14.2
+    },
+    {
+      "id": "FlutterEcho.Cansol",
+      "level": "HD",
+      "score": 976131,
+      "acc": 98.71,
+      "fc": false,
+      "constant": 9.8
+    },
+    {
+      "id": "FlutterEcho.Cansol",
+      "level": "IN",
+      "score": 988390,
+      "acc": 98.71,
+      "fc": true,
+      "constant": 14.9
+    },
+    {
+      "id": "Rebirth.ああああ",
+      "level": "IN",
+      "score": 942113,
+      "acc": 94.16,
+      "fc": false,
+      "constant": 15.4
+    },
+    {
+      "id": "AvataarReincarnationofKalpa.ScarletteakaCrYmson",
+      "level": "IN",
+      "score": 986680,
+      "acc": 98.52,
+      "fc": true,
+      "constant": 13.2
+    },
+    {
+      "id": "AvataarReincarnationofKalpa.ScarletteakaCrYmson",
+      "level": "AT",
+      "score": 925748,
+      "acc": 93.41,
+      "fc": false,
+      "constant": 16.6
+    },
+    {
+      "id": "雪降り雪が降っている.AiSSw夜輪ft結月ゆかり",
+      "level": "IN",
+      "score": 991720,
+      "acc": 99.08,
+      "fc": true,
+      "constant": 12
+    },
+    {
+      "id": "雪降り雪が降っている.AiSSw夜輪ft結月ゆかり",
+      "level": "AT",
+      "score": 989827,
+      "acc": 99.14,
+      "fc": false,
+      "constant": 14
+    },
+    {
+      "id": "RetributionCycleofRedemption.ArdolfvsDaily天利",
+      "level": "EZ",
+      "score": 983056,
+      "acc": 99.21,
+      "fc": false,
+      "constant": 6
+    },
+    {
+      "id": "アンビバレンス.すりぃ相沢",
+      "level": "IN",
+      "score": 968659,
+      "acc": 96.65,
+      "fc": false,
+      "constant": 14.2
+    },
+    {
+      "id": "Komplexe.雄之助featSennzai",
+      "level": "HD",
+      "score": 968558,
+      "acc": 97.21,
+      "fc": false,
+      "constant": 9.6
+    },
+    {
+      "id": "Komplexe.雄之助featSennzai",
+      "level": "IN",
+      "score": 962930,
+      "acc": 96.64,
+      "fc": false,
+      "constant": 14.3
+    },
+    {
+      "id": "slips.rintarosoma",
+      "level": "HD",
+      "score": 965162,
+      "acc": 97.54,
+      "fc": false,
+      "constant": 12.8
+    },
+    {
+      "id": "slips.rintarosoma",
+      "level": "IN",
+      "score": 949571,
+      "acc": 94.71,
+      "fc": false,
+      "constant": 16
+    },
+    {
+      "id": "slips.rintarosoma",
+      "level": "AT",
+      "score": 934643,
+      "acc": 93.98,
+      "fc": false,
+      "constant": 16.8
+    },
+    {
+      "id": "QZKagoRequiem.tpazolite",
+      "level": "EZ",
+      "score": 977100,
+      "acc": 98.39,
+      "fc": false,
+      "constant": 7
+    },
+    {
+      "id": "QZKagoRequiem.tpazolite",
+      "level": "HD",
+      "score": 967963,
+      "acc": 97.9,
+      "fc": false,
+      "constant": 13.3
+    },
+    {
+      "id": "QZKagoRequiem.tpazolite",
+      "level": "IN",
+      "score": 941461,
+      "acc": 94.16,
+      "fc": false,
+      "constant": 16.3
+    },
+    {
+      "id": "QZKagoRequiem.tpazolite",
+      "level": "AT",
+      "score": 930952,
+      "acc": 92.49,
+      "fc": false,
+      "constant": 17.4
+    },
+    {
+      "id": "SolaggyfeatUzumaki.ShrimpCatsはぁち後藤涼輔",
+      "level": "EZ",
+      "score": 959810,
+      "acc": 96.6,
+      "fc": false,
+      "constant": 5
+    },
+    {
+      "id": "SolaggyfeatUzumaki.ShrimpCatsはぁち後藤涼輔",
+      "level": "HD",
+      "score": 993070,
+      "acc": 99.23,
+      "fc": true,
+      "constant": 9.5
+    },
+    {
+      "id": "SolaggyfeatUzumaki.ShrimpCatsはぁち後藤涼輔",
+      "level": "IN",
+      "score": 968553,
+      "acc": 97.59,
+      "fc": false,
+      "constant": 14.6
+    },
+    {
+      "id": "000AinSophAur.Yumeji",
+      "level": "EZ",
+      "score": 985060,
+      "acc": 98.34,
+      "fc": true,
+      "constant": 2.5
+    },
+    {
+      "id": "000AinSophAur.Yumeji",
+      "level": "HD",
+      "score": 963858,
+      "acc": 96.83,
+      "fc": false,
+      "constant": 8.4
+    },
+    {
+      "id": "000AinSophAur.Yumeji",
+      "level": "IN",
+      "score": 968150,
+      "acc": 96.96,
+      "fc": false,
+      "constant": 14.4
+    },
+    {
+      "id": "Xepion.Acotto",
+      "level": "EZ",
+      "score": 995320,
+      "acc": 99.48,
+      "fc": true,
+      "constant": 2.5
+    },
+    {
+      "id": "Xepion.Acotto",
+      "level": "IN",
+      "score": 984193,
+      "acc": 98.79,
+      "fc": false,
+      "constant": 14.8
+    },
+    {
+      "id": "Archidoxen.Se_IRA",
+      "level": "IN",
+      "score": 945069,
+      "acc": 94.37,
+      "fc": false,
+      "constant": 15.6
+    },
+    {
+      "id": "Archidoxen.Se_IRA",
+      "level": "AT",
+      "score": 919141,
+      "acc": 91.28,
+      "fc": false,
+      "constant": 16.9
+    },
+    {
+      "id": "百鬼夜行.SaladSavior",
+      "level": "EZ",
+      "score": 969956,
+      "acc": 98.17,
+      "fc": false,
+      "constant": 4.5
+    },
+    {
+      "id": "百鬼夜行.SaladSavior",
+      "level": "HD",
+      "score": 1000000,
+      "acc": 100,
+      "fc": true,
+      "constant": 10.1
+    },
+    {
+      "id": "百鬼夜行.SaladSavior",
+      "level": "IN",
+      "score": 944129,
+      "acc": 95.26,
+      "fc": false,
+      "constant": 15.8
+    },
+    {
+      "id": "BANGINGSTRIKE.DewPleiades",
+      "level": "HD",
+      "score": 981540,
+      "acc": 99.19,
+      "fc": false,
+      "constant": 10.2
+    },
+    {
+      "id": "BANGINGSTRIKE.DewPleiades",
+      "level": "IN",
+      "score": 932773,
+      "acc": 94.12,
+      "fc": false,
+      "constant": 15.9
+    },
+    {
+      "id": "BANGINGSTRIKE.DewPleiades",
+      "level": "AT",
+      "score": 929499,
+      "acc": 92.35,
+      "fc": false,
+      "constant": 16.8
+    },
+    {
+      "id": "Cristalisia.onoken",
+      "level": "IN",
+      "score": 972845,
+      "acc": 98.4,
+      "fc": false,
+      "constant": 14.4
+    },
+    {
+      "id": "Hydra.JamesLandinoXAkiraComplex",
+      "level": "HD",
+      "score": 1000000,
+      "acc": 100,
+      "fc": true,
+      "constant": 11.6
+    },
+    {
+      "id": "Hydra.JamesLandinoXAkiraComplex",
+      "level": "IN",
+      "score": 936370,
+      "acc": 94.17,
+      "fc": false,
+      "constant": 15.4
+    },
+    {
+      "id": "Hydra.JamesLandinoXAkiraComplex",
+      "level": "AT",
+      "score": 920405,
+      "acc": 92.17,
+      "fc": false,
+      "constant": 17.1
+    },
+    {
+      "id": "最高傑作.PYKAMIA",
+      "level": "HD",
+      "score": 1000000,
+      "acc": 100,
+      "fc": true,
+      "constant": 9.3
+    },
+    {
+      "id": "最高傑作.PYKAMIA",
+      "level": "IN",
+      "score": 971583,
+      "acc": 98.03,
+      "fc": false,
+      "constant": 13.9
+    },
+    {
+      "id": "Locomotive.K",
+      "level": "IN",
+      "score": 966507,
+      "acc": 97.19,
+      "fc": false,
+      "constant": 13.5
+    },
+    {
+      "id": "Alb.Avans",
+      "level": "EZ",
+      "score": 964639,
+      "acc": 97.1,
+      "fc": false,
+      "constant": 3.5
+    },
+    {
+      "id": "Alb.Avans",
+      "level": "IN",
+      "score": 965990,
+      "acc": 97.08,
+      "fc": false,
+      "constant": 14.7
+    },
+    {
+      "id": "Incyde.YbeLL",
+      "level": "IN",
+      "score": 933701,
+      "acc": 94.1,
+      "fc": false,
+      "constant": 16.2
+    },
+    {
+      "id": "彩.MisoilePunch",
+      "level": "EZ",
+      "score": 1000000,
+      "acc": 100,
+      "fc": true,
+      "constant": 6
+    },
+    {
+      "id": "彼方へ名もなき海辺より.打打だいず&月乃",
+      "level": "HD",
+      "score": 972076,
+      "acc": 97.5,
+      "fc": false,
+      "constant": 8.1
+    },
+    {
+      "id": "彼方へ名もなき海辺より.打打だいず&月乃",
+      "level": "IN",
+      "score": 985030,
+      "acc": 99.28,
+      "fc": false,
+      "constant": 14.5
+    },
+    {
+      "id": "ABYSSMOTION192333.ariiolTSAR奏Sou",
+      "level": "EZ",
+      "score": 991720,
+      "acc": 99.08,
+      "fc": true,
+      "constant": 4
+    },
+    {
+      "id": "ABYSSMOTION192333.ariiolTSAR奏Sou",
+      "level": "IN",
+      "score": 975728,
+      "acc": 97.61,
+      "fc": false,
+      "constant": 14.7
+    },
+    {
+      "id": "Xenophobia.XinG",
+      "level": "HD",
+      "score": 960665,
+      "acc": 96.58,
+      "fc": false,
+      "constant": 12.6
+    },
+    {
+      "id": "Xenophobia.XinG",
+      "level": "IN",
+      "score": 960786,
+      "acc": 96.84,
+      "fc": false,
+      "constant": 14.9
+    },
+    {
+      "id": "Verruckt.Raimukun",
+      "level": "EZ",
+      "score": 1000000,
+      "acc": 100,
+      "fc": true,
+      "constant": 7
+    },
+    {
+      "id": "Verruckt.Raimukun",
+      "level": "HD",
+      "score": 966239,
+      "acc": 96.56,
+      "fc": false,
+      "constant": 12.7
+    },
+    {
+      "id": "Verruckt.Raimukun",
+      "level": "IN",
+      "score": 941348,
+      "acc": 94.9,
+      "fc": false,
+      "constant": 16.5
+    },
+    {
+      "id": "AfterZABANIYAMUGEdit.Daily天利",
+      "level": "HD",
+      "score": 973635,
+      "acc": 98.26,
+      "fc": false,
+      "constant": 10.6
+    },
+    {
+      "id": "AfterZABANIYAMUGEdit.Daily天利",
+      "level": "IN",
+      "score": 936016,
+      "acc": 94.32,
+      "fc": false,
+      "constant": 15.8
+    },
+    {
+      "id": "下一秒.BobHouSherlock卓智媛feat兰音Reine",
+      "level": "IN",
+      "score": 977903,
+      "acc": 97.65,
+      "fc": false,
+      "constant": 13.6
+    },
+    {
+      "id": "玩具狂奏曲終焉.きくお",
+      "level": "HD",
+      "score": 988930,
+      "acc": 98.77,
+      "fc": true,
+      "constant": 13.1
+    },
+    {
+      "id": "玩具狂奏曲終焉.きくお",
+      "level": "IN",
+      "score": 932056,
+      "acc": 93.97,
+      "fc": false,
+      "constant": 16
+    },
+    {
+      "id": "SnowDance.悠叶いのり",
+      "level": "IN",
+      "score": 989016,
+      "acc": 99.25,
+      "fc": false,
+      "constant": 12.4
+    },
+    {
+      "id": "亂舞.NekockLK",
+      "level": "HD",
+      "score": 979030,
+      "acc": 97.94,
+      "fc": false,
+      "constant": 7.5
+    },
+    {
+      "id": "亂舞.NekockLK",
+      "level": "IN",
+      "score": 993700,
+      "acc": 99.3,
+      "fc": true,
+      "constant": 13.2
+    },
+    {
+      "id": "Cleyera.Riya",
+      "level": "HD",
+      "score": 983800,
+      "acc": 98.2,
+      "fc": true,
+      "constant": 11
+    },
+    {
+      "id": "Cleyera.Riya",
+      "level": "IN",
+      "score": 952043,
+      "acc": 95.39,
+      "fc": false,
+      "constant": 15.4
+    },
+    {
+      "id": "70MinutesFighters.かたぎり",
+      "level": "IN",
+      "score": 922729,
+      "acc": 92.62,
+      "fc": false,
+      "constant": 16.5
+    },
+    {
+      "id": "GungnirFracture.Kryexe",
+      "level": "IN",
+      "score": 942539,
+      "acc": 93.83,
+      "fc": false,
+      "constant": 16.6
+    },
+    {
+      "id": "夢の降る日に.seatrus",
+      "level": "EZ",
+      "score": 996310,
+      "acc": 99.59,
+      "fc": true,
+      "constant": 2.5
+    },
+    {
+      "id": "夢の降る日に.seatrus",
+      "level": "IN",
+      "score": 926994,
+      "acc": 93.28,
+      "fc": false,
+      "constant": 16.6
+    },
+    {
+      "id": "DerSchneid.Ωμεγα",
+      "level": "IN",
+      "score": 960458,
+      "acc": 95.76,
+      "fc": false,
+      "constant": 16.1
+    },
+    {
+      "id": "DerSchneid.Ωμεγα",
+      "level": "AT",
+      "score": 925737,
+      "acc": 92.52,
+      "fc": false,
+      "constant": 17.5
+    },
+    {
+      "id": "NWAD.Knighthood",
+      "level": "EZ",
+      "score": 995770,
+      "acc": 99.53,
+      "fc": true,
+      "constant": 5.5
+    },
+    {
+      "id": "NWAD.Knighthood",
+      "level": "IN",
+      "score": 964189,
+      "acc": 96.14,
+      "fc": false,
+      "constant": 15.6
+    },
+    {
+      "id": "DevastatingHistory.NAMV",
+      "level": "EZ",
+      "score": 983350,
+      "acc": 98.15,
+      "fc": true,
+      "constant": 6
+    },
+    {
+      "id": "DevastatingHistory.NAMV",
+      "level": "HD",
+      "score": 985788,
+      "acc": 99.38,
+      "fc": false,
+      "constant": 11.8
+    },
+    {
+      "id": "DevastatingHistory.NAMV",
+      "level": "IN",
+      "score": 954149,
+      "acc": 96.24,
+      "fc": false,
+      "constant": 15.5
+    },
+    {
+      "id": "Cryogenic.CamelliaftPetraGurin",
+      "level": "EZ",
+      "score": 1000000,
+      "acc": 100,
+      "fc": true,
+      "constant": 5
+    },
+    {
+      "id": "Cryogenic.CamelliaftPetraGurin",
+      "level": "IN",
+      "score": 962443,
+      "acc": 96.57,
+      "fc": false,
+      "constant": 15.1
+    },
+    {
+      "id": "Poseidon.1112vsStar",
+      "level": "AT",
+      "score": 950316,
+      "acc": 95.45,
+      "fc": false,
+      "constant": 16.2
+    },
+    {
+      "id": "WATER.A39沙包P",
+      "level": "EZ",
+      "score": 968616,
+      "acc": 96.84,
+      "fc": false,
+      "constant": 4.5
+    },
+    {
+      "id": "WATER.A39沙包P",
+      "level": "HD",
+      "score": 988840,
+      "acc": 98.76,
+      "fc": true,
+      "constant": 9.5
+    },
+    {
+      "id": "WATER.A39沙包P",
+      "level": "IN",
+      "score": 981902,
+      "acc": 98.99,
+      "fc": false,
+      "constant": 13.6
+    },
+    {
+      "id": "MiracleForestVIPMix.Rinthlive",
+      "level": "IN",
+      "score": 1000000,
+      "acc": 100,
+      "fc": true,
+      "constant": 13.1
+    },
+    {
+      "id": "MOBILYS.Dachs",
+      "level": "HD",
+      "score": 956524,
+      "acc": 96.65,
+      "fc": false,
+      "constant": 9.3
+    },
+    {
+      "id": "MOBILYS.Dachs",
+      "level": "IN",
+      "score": 954747,
+      "acc": 96.61,
+      "fc": false,
+      "constant": 14.3
+    },
+    {
+      "id": "Lyrith迷宮リリス.ユメミド",
+      "level": "IN",
+      "score": 937576,
+      "acc": 94.34,
+      "fc": false,
+      "constant": 16.1
+    },
+    {
+      "id": "Lyrith迷宮リリス.ユメミド",
+      "level": "AT",
+      "score": 930683,
+      "acc": 93.11,
+      "fc": false,
+      "constant": 16.5
+    },
+    {
+      "id": "Demiurge.Rabpit",
+      "level": "EZ",
+      "score": 1000000,
+      "acc": 100,
+      "fc": true,
+      "constant": 1.5
+    },
+    {
+      "id": "Demiurge.Rabpit",
+      "level": "IN",
+      "score": 968966,
+      "acc": 96.62,
+      "fc": false,
+      "constant": 11.8
+    },
+    {
+      "id": "Demonkin.ForgedReigns",
+      "level": "EZ",
+      "score": 967730,
+      "acc": 97.38,
+      "fc": false,
+      "constant": 4.5
+    },
+    {
+      "id": "Demonkin.ForgedReigns",
+      "level": "IN",
+      "score": 956321,
+      "acc": 96.5,
+      "fc": false,
+      "constant": 13.8
+    },
+    {
+      "id": "Re_NascencePsystyleVer.Rinth_live",
+      "level": "EZ",
+      "score": 1000000,
+      "acc": 100,
+      "fc": true,
+      "constant": 5.5
+    },
+    {
+      "id": "Re_NascencePsystyleVer.Rinth_live",
+      "level": "HD",
+      "score": 974180,
+      "acc": 97.21,
+      "fc": false,
+      "constant": 11.7
+    },
+    {
+      "id": "Re_NascencePsystyleVer.Rinth_live",
+      "level": "IN",
+      "score": 960082,
+      "acc": 96.88,
+      "fc": false,
+      "constant": 14.4
+    },
+    {
+      "id": "Ark.kanoryo",
+      "level": "HD",
+      "score": 982990,
+      "acc": 98.11,
+      "fc": true,
+      "constant": 9.5
+    },
+    {
+      "id": "Ark.kanoryo",
+      "level": "IN",
+      "score": 988840,
+      "acc": 98.76,
+      "fc": true,
+      "constant": 15
+    },
+    {
+      "id": "Ark.kanoryo",
+      "level": "AT",
+      "score": 931970,
+      "acc": 93.78,
+      "fc": false,
+      "constant": 16.4
+    },
+    {
+      "id": "AfterDawn.S9ryne",
+      "level": "EZ",
+      "score": 993520,
+      "acc": 99.28,
+      "fc": true,
+      "constant": 3
+    },
+    {
+      "id": "AfterDawn.S9ryne",
+      "level": "HD",
+      "score": 975832,
+      "acc": 97.64,
+      "fc": false,
+      "constant": 10.4
+    },
+    {
+      "id": "AfterDawn.S9ryne",
+      "level": "IN",
+      "score": 951816,
+      "acc": 95.22,
+      "fc": false,
+      "constant": 15.3
+    },
+    {
+      "id": "INFiNiTEENERZYOverdoze.RekuMochizuki",
+      "level": "HD",
+      "score": 1000000,
+      "acc": 100,
+      "fc": true,
+      "constant": 12.3
+    },
+    {
+      "id": "INFiNiTEENERZYOverdoze.RekuMochizuki",
+      "level": "AT",
+      "score": 914344,
+      "acc": 91.41,
+      "fc": false,
+      "constant": 16.9
+    },
+    {
+      "id": "Khalid.Dolphin",
+      "level": "EZ",
+      "score": 994780,
+      "acc": 99.42,
+      "fc": true,
+      "constant": 4
+    },
+    {
+      "id": "Khalid.Dolphin",
+      "level": "IN",
+      "score": 966456,
+      "acc": 97.69,
+      "fc": false,
+      "constant": 13
+    },
+    {
+      "id": "QuantumHyperspace.D_AAN",
+      "level": "IN",
+      "score": 983279,
+      "acc": 98.5,
+      "fc": false,
+      "constant": 15
+    },
+    {
+      "id": "FreakyUndulationsNobleKnightsofTune.JehezukielKURORAK",
+      "level": "EZ",
+      "score": 1000000,
+      "acc": 100,
+      "fc": true,
+      "constant": 7
+    },
+    {
+      "id": "FreakyUndulationsNobleKnightsofTune.JehezukielKURORAK",
+      "level": "HD",
+      "score": 1000000,
+      "acc": 100,
+      "fc": true,
+      "constant": 10.9
+    },
+    {
+      "id": "FreakyUndulationsNobleKnightsofTune.JehezukielKURORAK",
+      "level": "IN",
+      "score": 970161,
+      "acc": 97.28,
+      "fc": false,
+      "constant": 15.3
+    },
+    {
+      "id": "PANICPARADISE.DJSHIONY",
+      "level": "HD",
+      "score": 971960,
+      "acc": 98.26,
+      "fc": false,
+      "constant": 11.5
+    },
+    {
+      "id": "PANICPARADISE.DJSHIONY",
+      "level": "IN",
+      "score": 950761,
+      "acc": 95.38,
+      "fc": false,
+      "constant": 15.5
+    },
+    {
+      "id": "ReEndofaDream.umavsモリモリあつし",
+      "level": "IN",
+      "score": 948880,
+      "acc": 95.91,
+      "fc": false,
+      "constant": 15.9
+    },
+    {
+      "id": "ReEndofaDream.umavsモリモリあつし",
+      "level": "AT",
+      "score": 934657,
+      "acc": 94.1,
+      "fc": false,
+      "constant": 16.9
+    },
+    {
+      "id": "心の記憶.A39沙包P",
+      "level": "HD",
+      "score": 963163,
+      "acc": 97,
+      "fc": false,
+      "constant": 9.1
+    },
+    {
+      "id": "Spotlight.Ardolf",
+      "level": "HD",
+      "score": 993610,
+      "acc": 99.29,
+      "fc": true,
+      "constant": 9.9
+    },
+    {
+      "id": "Spotlight.Ardolf",
+      "level": "IN",
+      "score": 959599,
+      "acc": 97.12,
+      "fc": false,
+      "constant": 14.4
+    },
+    {
+      "id": "NightTheater.わかどり",
+      "level": "IN",
+      "score": 967055,
+      "acc": 97.94,
+      "fc": false,
+      "constant": 14.3
+    },
+    {
+      "id": "Ramification.rareguyReina",
+      "level": "HD",
+      "score": 967917,
+      "acc": 97.64,
+      "fc": false,
+      "constant": 10.4
+    },
+    {
+      "id": "Ramification.rareguyReina",
+      "level": "IN",
+      "score": 968601,
+      "acc": 98.09,
+      "fc": false,
+      "constant": 14.8
+    },
+    {
+      "id": "DerRichter.Ωμεγα",
+      "level": "IN",
+      "score": 930943,
+      "acc": 93.8,
+      "fc": false,
+      "constant": 15.6
+    },
+    {
+      "id": "DerRichter.Ωμεγα",
+      "level": "AT",
+      "score": 927667,
+      "acc": 92.23,
+      "fc": false,
+      "constant": 16.9
+    },
+    {
+      "id": "ATHAZA.LeaF",
+      "level": "EZ",
+      "score": 1000000,
+      "acc": 100,
+      "fc": true,
+      "constant": 8.6
+    },
+    {
+      "id": "ATHAZA.LeaF",
+      "level": "AT",
+      "score": 925614,
+      "acc": 93.02,
+      "fc": false,
+      "constant": 16.6
+    }
+  ]
+}

@@ -1,0 +1,110 @@
+# Phi Prism · Phigros 查分器
+
+一个可以直接部署到 GitHub Pages 的纯静态 Phigros 成绩网站。无需 Node.js 构建、后端、数据库、Cloudflare Worker 或付费 API。
+
+## 最快开始
+
+解压后双击根目录 `index.html`，点击“先体验演示成绩”。页面、曲库、327 首曲绘、字体与解析库均已内置。`file://` 下的浏览器存储、剪贴板和网络能力因浏览器而异；推荐在 GitHub Pages 的 HTTPS 页面使用完整功能。
+
+## GitHub Pages 部署
+
+1. 在 GitHub 创建一个公开仓库。
+2. 上传本包解压后的**内容**，让 `index.html`、`.nojekyll` 和 `assets/` 直接位于仓库根目录；不要只上传 ZIP。
+3. 进入仓库 `Settings → Pages`。
+4. `Source` 选择 `Deploy from a branch`，分支选 `main`，目录选 `/ (root)`，保存。
+5. 等待 GitHub 部署完成，使用 Pages 页面显示的网址访问。
+
+资源均使用相对路径，支持仓库子路径，例如 `https://你的用户名.github.io/仓库名/`。无需 npm install、npm build 或 GitHub Actions 构建。GitHub 免费账号可使用公开仓库的 Pages。
+
+## 功能
+
+- 国内 TapTap 云存档：输入 25 位 sessionToken，读取玩家信息及最新云存档，浏览器本地解密。
+- 本地导入：Phigros 原始云存档 ZIP、本工具导出的 JSON、包含 gameRecord 的兼容 JSON。
+- 成绩榜：B20（旧制 φ1+B19）、B30（φ3+B27）、B50、自定义 4—100 项，附 6 项 Overflow。
+- 单曲查询：曲名、曲师、谱师、ID 搜索，难度、章节、评级筛选，排序与分页。
+- 统计：已玩谱面、通关、FC、φ、评级与 ACC 分布、平均 ACC、最高定数、累计最佳分数、章节完成度、课题记录、RKS 构成、等效 RKS 计算器。
+- 推分计划：选择总 RKS 目标增量，计算单谱面目标 ACC，计入 Best 槽位与 φ 槽位变化。
+- 历史：按账号保存最近 12 份不同成绩快照，总计最多 36 份；趋势与成绩变化对比；JSON 备份和恢复。
+- 图片：Best N、单曲、统计、推分计划；横竖版；PNG/JPG；分辨率、主题色、背景曲绘、背景亮度、自定义背景与头像、昵称、签名、隐私与水印选项；预览后下载，兼容浏览器支持复制图片。
+- 电脑与手机布局；文件拖入导入；`/` 快捷键打开曲目搜索。
+
+## 在线查分与 sessionToken
+
+通过你已使用的可信查分工具的“导出 sessionToken”功能，或你自己设备上的账户数据获取 token。本站不提供扫码登录，不需要 TapTap 密码，不要求把凭证交给站长。
+
+浏览器仅向 `https://rak3ffdi.cloud.tds1.tapapis.cn/1.1` 发送 sessionToken。读取玩家信息后，使用该玩家的 ID 查询 `/gamesaves/` 并选择最新存档。下载存档时**不携带** token，也不通过公共代理。
+
+默认只在当前会话使用 token；选中“记住 token”后才保存到此站点的 localStorage。清除按钮可移除已保存凭证。成绩 JSON、历史备份与图片均不包含 token。不要把 token 写入源码、公开仓库或截图。
+
+**跨域备用流程：**如果云存档下载域名不允许浏览器跨域读取，页面会显示“下载原始存档 ZIP”链接。手动下载后导入本站，即可继续使用全部本地统计和出图功能，不需要架设后端。网络、接口变更和浏览器策略可能影响在线读取；静态网站无法自行修改远端的跨域策略。
+
+当前已验证云存档接口的跨域预检、解析算法与模拟完整请求；交付时没有使用真实玩家的 sessionToken 做端到端账号同步。`tests/VERIFICATION.md` 记录具体验证范围。
+
+## RKS 与统计口径
+
+单谱面定数为 `d`，ACC 使用 0—100 的百分数：
+
+```text
+ACC < 70：RKS = 0
+其他情况：RKS = d × ((ACC - 55) / 45)²
+现行总 RKS = (最高 3 个 φ 位 + 最高 27 个 Best 位) / 30
+```
+
+φ 位要求 1000000 分且 100% ACC。同一 φ 谱面可以同时计入 φ 位和 Best 位；缺位按 0 计算。B20 使用旧制公式，其他自定义榜单仅用于扩展展示。页面总 RKS 和推分建议始终按现行 B30 计算。
+
+推分建议表示**独立更新一首谱面**后的真实总体增量；目标 ACC 向上取整到 0.01%，计算过程会处理新满分进入 φ 位的变化。多张建议的提升不能直接相加。无法靠单曲达到目标时不编造目标。满分成绩不再推荐提升。
+
+全连标识统一显示为蓝色 V（Full Combo），普通 V 评级显示为白色；全连计数包含 φ，评级分布中 φ、蓝色 V、白色 V、S、A、B、C、F 互斥。内部 FC 标记与 JSON 数据格式保持兼容。通关按分数至少 700000 统计。存档不包含的游玩时长、次数和单次判定不作推测。曲库更新可能令重算 RKS 与云存档摘要不同。未知谱面会保留，缺少定数时不参与 RKS。
+
+长图会按浏览器画布尺寸和内存预算自动降低倍率；自定义超过 60 项的长榜单尤其如此。图片背景与曲绘已内嵌为 data URL，避免外链画布污染；直接打开 index.html 也可以生成和下载图片。复制图片需要浏览器和 HTTPS 支持。
+
+## JSON 格式
+
+见 `examples/demo-scores.json`。至少需要：
+
+```json
+{
+  "schema": "phi-prism/1",
+  "profile": {"name": "玩家昵称"},
+  "records": [
+    {"id": "Glaciaxion.SunsetRay", "level": "IN", "score": 980000, "acc": 98.5, "fc": false}
+  ]
+}
+```
+
+曲目 ID 可带 `.0` 后缀；难度支持 EZ、HD、IN、AT 或 0—3。本工具优先使用内置曲库的定数；未收录曲目可在条目中提供 `constant`。兼容 `gameRecord: { "曲目ID.0": [[分数,ACC,FC], null, ...] }` 与各难度对象数组。
+
+本地 ZIP 支持 `gameRecord` 版本 1、`user` 版本 1，以及当前兼容的 gameProgress 基础字段。新版本结构不兼容时会明确报错，不会悄悄当成空成绩。单文件导入上限 12 MB，解压目标数据上限 8 MB。
+
+## 文件结构
+
+| 路径 | 用途 |
+| --- | --- |
+| `index.html` | 网站入口 |
+| `assets/style.css` | 响应式 Phigros 风格界面 |
+| `assets/app.js` | 交互、筛选、历史、导入导出 |
+| `assets/core.js` | RKS、推分、二进制解析、云存档读取 |
+| `assets/export.js` | Canvas 成绩图排版 |
+| `assets/data.js` | 曲目信息与定数快照 |
+| `assets/art.js` | 内嵌曲绘；不要手工删除 |
+| `assets/vendor/` | 本地解压与加密依赖 |
+| `examples/` | 演示 JSON、人工构造的解析测试 ZIP、示例图片 |
+| `tools/update_data.py` | 可选的曲库更新工具 |
+| `tests/` | 正确性验证与说明 |
+
+## 更新曲库
+
+网站运行不需要 Python。更新素材时，可在有 Python 的电脑执行：
+
+```bash
+python -m pip install pillow
+python tools/update_data.py
+```
+
+脚本从上游下载元数据与曲绘、生成新的 `assets/data.js` 和 `assets/art.js`，再把这两个文件更新到仓库即可。只更新元数据可使用 `--skip-art`。如果只需要临时使用新定数，网站说明弹窗支持导入曲库 JSON（只对当前会话生效）。
+
+## 许可与来源
+
+本项目代码使用 GPL-3.0-or-later，详见 LICENSE。协议与结构参考 Catrong/phi-plugin；曲库及曲绘来自该项目及 phi-plugin-ill。fflate、CryptoJS 与 Barlow 字体保留各自许可。曲绘及游戏相关素材版权仍归原作者和权利人所有，不能据代码许可推定素材可自由商用。完整说明见 THIRD_PARTY_NOTICES.md。
+
+这是非官方工具，与 Pigeon Games、Phigros、TapTap 无隶属关系。
