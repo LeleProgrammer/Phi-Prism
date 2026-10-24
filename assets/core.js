@@ -224,7 +224,7 @@
   }
   async function diagnoseCloud() {
     const start = Date.now();
-    const report = {version: '2026-10-24', protocol: root.location?.protocol || 'unknown', secureContext: root.isSecureContext === true,
+    const report = {version: '2026-10-24-r2', protocol: root.location?.protocol || 'unknown', secureContext: root.isSecureContext === true,
       online: root.navigator?.onLine !== false, browser: String(root.navigator?.userAgent || 'unknown').slice(0, 240),
       fetch: typeof fetch === 'function', abortController: typeof AbortController === 'function',
       nativeTimeout: typeof AbortSignal !== 'undefined' && typeof AbortSignal.timeout === 'function'};
@@ -236,6 +236,18 @@
       report.code = error.code || 'UNKNOWN';
       report.result = error.code === 'AUTH' ? '连接正常：浏览器已读到接口对测试占位符的拒绝响应。此结果不验证你的 sessionToken 或存档下载。' : error.message;
     }
+    if (report.code === 'AUTH') {
+      // Filter by a fixed, nonexistent fixture user. Never query an unfiltered list.
+      const params = new URLSearchParams({skip: '0', limit: '1', where: JSON.stringify({user: {__type: 'Pointer', className: '_User', objectId: 'phi-prism-connectivity-fixture'}}), include: 'cover,gameFile'});
+      try {
+        const result = await cloudRequest('/gamesaves?' + params, '0000000000000000000000000', '存档列表连通性检测', 15000);
+        report.code = Array.isArray(result.results) ? 'OK' : 'RESPONSE';
+        report.result = report.code === 'OK' ? '资料接口与存档列表接口均可访问；不验证真实 token 或存档文件下载。' : '存档列表接口可读取，但返回格式不正确。';
+      } catch (error) {
+        report.code = error.code === 'AUTH' ? 'OK' : error.code || 'UNKNOWN';
+        report.result = error.code === 'AUTH' ? '资料接口与存档列表接口均可读取测试占位符的拒绝响应；不验证真实 token 或存档文件下载。' : error.message;
+      }
+    }
     report.elapsedMs = Date.now() - start; return report;
   }
   async function cloud(token, onStage = () => {}, onFile = () => {}) {
@@ -245,7 +257,8 @@
     if (!user.objectId) throw Error('云存档接口未返回玩家 ID。');
     onStage('正在查询最新云存档…');
     const params = new URLSearchParams({skip: '0', limit: '100', where: JSON.stringify({user: {__type: 'Pointer', className: '_User', objectId: user.objectId}}), include: 'cover,gameFile'});
-    const j = await cloudRequest('/gamesaves/?' + params, token, '查询云存档');
+    // The slash-suffixed route returns a 301 without CORS headers.
+    const j = await cloudRequest('/gamesaves?' + params, token, '查询云存档');
     const saves = (j.results || []).filter(s => s.gameFile?.url).sort((a, b) => +new Date(b.modifiedAt?.iso || b.updatedAt) - +new Date(a.modifiedAt?.iso || a.updatedAt));
     if (!saves.length) throw Error('此账号没有云存档，请先在游戏内上传存档。');
     const s = saves[0], url = new URL(s.gameFile.url);
