@@ -30,6 +30,10 @@
     if(save.unknown)toast(`${save.unknown} 条成绩缺少定数，已保留但不参与 RKS；可导入新版曲库。`);
   }
   function art(id){return window.PHI_ART?.[id]||'';}
+  function artworkNote(){
+    const total=PHI_DATA.songs.length,loaded=PHI_DATA.songs.filter(s=>art(s.id)).length;
+    return loaded<total?` · 曲绘未完整加载（${loaded}/${total}），请上传完整 assets 目录后强制刷新`:'';
+  }
   function updateProfile(){
     const save=S.save,stat=P.stats(save),b=P.board(save,30),top=b.phi[0]||b.best[0];
     const cover=top?art(top.id):'';
@@ -44,7 +48,7 @@
     $('#connectText').textContent=save.demo?'连接真实存档':'管理存档';
     const meta=[['已玩谱面',stat.played,` / ${stat.total}`,'PLAYED','按当前曲库统计'],['FULL COMBO',stat.fc,'','V','包含所有 φ 成绩'],['ALL PERFECT',stat.phi,'','PHI','100 万分 · 100% ACC'],['B30 平均 ACC',(b.best.length?b.best.reduce((s,x)=>s+x.acc,0)/b.best.length:0).toFixed(2),'%','ACCURACY','Best 27 中已有成绩的均值']];
     $('#metrics').innerHTML=meta.map(([label,value,unit,code,note],i)=>`<div class="metric"><div class="metric-label">${esc(label)}<i class="${i===1?'full-combo':''}">${code}</i></div><strong class="${i===2?'gold':''}">${value}<span>${unit}</span></strong><p>${note}</p></div>`).join('');
-    $('#dataNote').textContent=`曲库快照 ${PHI_DATA.date} · ${P.songs.size} 首曲目 · ${save.unknown?'部分未知定数未参与计算 · ':''}统计与图片在浏览器内生成${save.demo?' · 当前为演示数据':''}`;
+    $('#dataNote').textContent=`曲库快照 ${PHI_DATA.date} · ${P.songs.size} 首曲目 · ${save.unknown?'部分未知定数未参与计算 · ':''}统计与图片在浏览器内生成${save.demo?' · 当前为演示数据':''}${artworkNote()}`;
   }
   function badge(r){return `<span class="level lv-${r.level}">${r.level}<small>${r.constant?.toFixed(1)||'?'}</small></span>`;}
   function card(r,i,{phi=false,overflow=false,hint=null}={}){
@@ -247,7 +251,7 @@
   window.addEventListener('drop',e=>{e.preventDefault();dragCount=0;document.body.classList.remove('drop-active');importFile(e.dataTransfer?.files[0]);});
   document.addEventListener('keydown',e=>{if(e.key==='/'&&!e.ctrlKey&&!e.metaKey&&!/INPUT|TEXTAREA|SELECT/.test(e.target.tagName)&&!document.querySelector('dialog[open]')&&S.save){e.preventDefault();S.view='library';render();$('#songSearch').focus();}});
   const cached=readStore(LS.cache);if(cached){try{setSave(P.normalize(cached),{snapshot:false,source:'缓存'});}catch{removeStore(LS.cache);}}
-  if(!S.save){const hero=[...P.songs.values()].find(s=>s.title==='Rrhar’il')||[...P.songs.values()].find(s=>s.title.includes('Distorted Fate'))||[...P.songs.values()].at(-1);if(hero)$('#hero').style.backgroundImage=`url("${art(hero.id)}")`;$('#dataNote').textContent=`曲库快照 ${PHI_DATA.date} · ${P.songs.size} 首曲目 · 素材已内置，可离线出图`;}
+  if(!S.save){const hero=[...P.songs.values()].find(s=>s.title==='Rrhar’il')||[...P.songs.values()].find(s=>s.title.includes('Distorted Fate'))||[...P.songs.values()].at(-1);if(hero)$('#hero').style.backgroundImage=`url("${art(hero.id)}")`;$('#dataNote').textContent=`曲库快照 ${PHI_DATA.date} · ${P.songs.size} 首曲目 · 素材已内置，可离线出图${artworkNote()}`;}
   // Expose state only for local diagnostics; it never contains persisted token fields.
   window.PhiPrism={getSave:()=>S.save,getView:()=>S.view};
 })();

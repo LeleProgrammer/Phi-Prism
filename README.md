@@ -88,7 +88,7 @@ ACC < 70：RKS = 0
 | `assets/core.js` | RKS、推分、二进制解析、云存档读取 |
 | `assets/export.js` | Canvas 成绩图排版 |
 | `assets/data.js` | 曲目信息与定数快照 |
-| `assets/art.js` | 内嵌曲绘；不要手工删除 |
+| `assets/art.js`、`assets/art-data/` | 曲绘初始化与分块数据；整个目录必须上传 |
 | `assets/vendor/` | 本地解压与加密依赖 |
 | `examples/` | 演示 JSON、人工构造的解析测试 ZIP、示例图片 |
 | `tools/update_data.py` | 可选的曲库更新工具 |
@@ -103,7 +103,7 @@ python -m pip install pillow
 python tools/update_data.py
 ```
 
-脚本从上游下载元数据与曲绘、生成新的 `assets/data.js` 和 `assets/art.js`，再把这两个文件更新到仓库即可。只更新元数据可使用 `--skip-art`。如果只需要临时使用新定数，网站说明弹窗支持导入曲库 JSON（只对当前会话生效）。
+脚本从上游下载元数据与曲绘、生成新的 `assets/data.js`、`assets/art.js` 和 `assets/art-data/` 分块脚本，再更新 `index.html`、这两个文件及完整的 `assets/art-data/` 目录即可。只更新元数据可使用 `--skip-art`。如果只需要临时使用新定数，网站说明弹窗支持导入曲库 JSON（只对当前会话生效）。
 
 ## 许可与来源
 
@@ -116,3 +116,9 @@ python tools/update_data.py
 ### 2026-10-24-r2：存档列表跨域重定向修复
 
 原地址 `/1.1/gamesaves/?…` 的 GET 返回 301，转向 `/1.1/gamesaves?…`，但中间重定向响应缺少 `Access-Control-Allow-Origin`。先前 OPTIONS 预检可通过，因而未发现这个问题。现已直接请求不带末尾斜杠的规范地址，并扩展连接诊断检查两个接口。更新部署后请按 Ctrl+F5，连接面板应显示 `2026-10-24-r2`。
+
+### 曲绘修复：2026-10-24
+
+已恢复全部 327 张曲绘，并拆为 25 个静态脚本，每个不超过 512 KiB。请完整上传 `index.html`、`assets/art.js`、`assets/art-data/`、`assets/app.js`；建议直接覆盖完整包。曲绘仍以 data URL 保存，兼容 GitHub Pages 子目录、本地双击和 Canvas 图片导出，不依赖外部图床。若分块漏传，页面底部会提示曲绘加载数量。
+
+曲绘完整性检查：`node tests/art.test.cjs`，检查 HTML 引用的所有 JavaScript 语法、327 张图片的二进制长度、分块大小与加载顺序。
