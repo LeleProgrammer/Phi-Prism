@@ -122,13 +122,27 @@
   }
   async function connect(e){
     e.preventDefault();const t=$('#token').value.trim();if(!/^[a-zA-Z0-9]{25}$/.test(t)){toast('请输入 25 位 sessionToken。');return;}
-    $('#submitConnect').disabled=true;$('#connectStatus').classList.remove('error');$('#downloadFallback').hidden=true;
+    $('#submitConnect').disabled=true;$('#diagnoseBtn').disabled=true;$('#connectStatus').classList.remove('error');$('#downloadFallback').hidden=true;
     try{
       const save=await P.cloud(t,s=>$('#connectStatus').textContent=s,url=>{$('#saveDownload').href=url;$('#downloadFallback').hidden=false;});
       tokenMemory=t;if($('#rememberToken').checked)writeStore(LS.token,t);else removeStore(LS.token);
       setSave(save,{source:'云存档'});$('#connectDialog').close();toast('云存档已读取，成绩与统计已更新。');
-    }catch(err){$('#connectStatus').textContent=err.message;$('#connectStatus').classList.add('error');}
-    finally{$('#submitConnect').disabled=false;}
+    }catch(err){$('#connectStatus').textContent=(err.code?'['+err.code+'] ':'')+err.message;$('#connectStatus').classList.add('error');}
+    finally{$('#submitConnect').disabled=false;$('#diagnoseBtn').disabled=false;}
+  }
+  let connectionReport=null;
+  async function diagnoseConnection(){
+    $('#diagnoseBtn').disabled=true;$('#submitConnect').disabled=true;$('#saveDiagnosis').hidden=true;$('#diagnoseResult').hidden=false;
+    $('#diagnoseResult').textContent='正在检测浏览器与官方接口的连接，不读取输入框或已保存的 token…';
+    try{
+      const r=await P.diagnoseCloud();
+      connectionReport=['Phi Prism 连接诊断 '+r.version,'结果 ['+r.code+']：'+r.result,'打开方式：'+r.protocol,'浏览器：'+r.browser,
+        '联网状态：'+r.online,'安全上下文：'+r.secureContext,'Fetch：'+r.fetch,'AbortController：'+r.abortController,'原生超时 API：'+r.nativeTimeout,
+        '耗时：'+r.elapsedMs+' ms','本报告不包含你的 sessionToken、玩家资料或成绩。',
+        r.code==='NETWORK'?'浏览器未提供具体网络原因。请按 F12 → Console，点击“连接诊断”后查看红色错误；只截错误文字，勿截请求头。':''].filter(Boolean).join('\n');
+      $('#diagnoseResult').textContent=connectionReport;$('#saveDiagnosis').hidden=false;
+    }catch{connectionReport=null;$('#diagnoseResult').textContent='诊断未能完成，请在新版浏览器中打开后重试。';}
+    finally{$('#diagnoseBtn').disabled=false;$('#submitConnect').disabled=false;}
   }
   function downloadBlob(blob,name){const url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),30000);}
   function downloadJSON(obj,name){downloadBlob(new Blob([JSON.stringify(obj,null,2)],{type:'application/json'}),name);}
@@ -174,6 +188,8 @@
     $('#helpDialog').showModal();
   }
   $('#connectForm').addEventListener('submit',connect);
+  $('#diagnoseBtn').onclick=diagnoseConnection;
+  $('#saveDiagnosis').onclick=()=>connectionReport&&downloadBlob(new Blob([connectionReport],{type:'text/plain;charset=utf-8'}),'phi-prism-connection.txt');
   for(const id of ['connectBtn','startConnect'])$('#'+id).onclick=openConnect;
   for(const id of ['startImport','importBtn','dialogImport','fallbackImport'])$('#'+id).onclick=()=>$('#importFile').click();
   $('#syncBtn').onclick=()=>{openConnect();if(tokenMemory||readStore(LS.token,''))$('#connectForm').requestSubmit();};

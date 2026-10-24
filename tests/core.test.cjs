@@ -4,7 +4,7 @@ const vm = require('node:vm');
 const path = require('node:path');
 const root = path.resolve(__dirname, '..');
 // Production files are unmodified, executed in a browser-like global scope.
-const sandbox = {console, TextDecoder, Uint8Array, ArrayBuffer, DataView, Date, URL, URLSearchParams, AbortSignal, atob};
+const sandbox = {console, TextDecoder, Uint8Array, ArrayBuffer, DataView, Date, URL, URLSearchParams, AbortController, AbortSignal, setTimeout, clearTimeout, atob};
 sandbox.window = sandbox;
 vm.createContext(sandbox);
 for (const file of ['assets/vendor/crypto-js.js', 'assets/vendor/fflate.js', 'assets/data.js', 'assets/core.js']) vm.runInContext(fs.readFileSync(path.join(root,file),'utf8'), sandbox);

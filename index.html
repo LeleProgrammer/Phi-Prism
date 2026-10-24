@@ -8,14 +8,14 @@
   <meta name="referrer" content="no-referrer">
   <title>Phi Prism · Phigros 查分器</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="assets/style.css?v=20261024-connect2">
   <script defer src="assets/vendor/fflate.js"></script>
   <script defer src="assets/vendor/crypto-js.js"></script>
   <script defer src="assets/data.js"></script>
   <script defer src="assets/art.js"></script>
-  <script defer src="assets/core.js"></script>
+  <script defer src="assets/core.js?v=20261024-connect2"></script>
   <script defer src="assets/export.js"></script>
-  <script defer src="assets/app.js"></script>
+  <script defer src="assets/app.js?v=20261024-connect2"></script>
 </head>
 <body>
   <svg class="svg-defs" aria-hidden="true"><defs>
@@ -66,6 +66,7 @@
     <p class="muted">输入 TapTap 国内云存档的 sessionToken。仅向游戏云存档接口发送，用于读取成绩。</p>
     <form id="connectForm"><label for="token">sessionToken</label><div class="token-field"><input id="token" type="password" autocomplete="off" spellcheck="false" maxlength="25" placeholder="25 位英文字母与数字" required pattern="[a-zA-Z0-9]{25}"><button type="button" class="text-btn" id="toggleToken">显示</button></div><label class="check"><input type="checkbox" id="rememberToken">在此浏览器记住 token（共用设备请勿勾选）</label><button class="btn primary full" type="submit" id="submitConnect">读取云存档 <svg><use href="#i-arrow"/></svg></button></form>
     <p id="connectStatus" class="status-message" role="status"></p><p id="downloadFallback" hidden><a id="saveDownload" target="_blank" rel="noopener noreferrer">下载原始存档 ZIP ↗</a>，保存后 <button class="text-link" id="fallbackImport">导入本站</button>。</p>
+    <div class="connection-diagnostics"><button type="button" class="btn small" id="diagnoseBtn">连接诊断（不使用 token）</button><span class="muted"> · 连接修订版 2026-10-24</span><pre id="diagnoseResult" class="diagnose-result" hidden aria-live="polite"></pre><button type="button" class="text-btn" id="saveDiagnosis" hidden>下载诊断报告</button></div>
     <div class="dialog-divider"></div><div class="connect-alternatives"><button class="btn" id="dialogImport"><svg><use href="#i-upload"/></svg>导入 ZIP / JSON</button><button class="text-btn danger" id="forgetBtn">清除已保存的 token</button></div>
     <details><summary>如何获取 sessionToken？</summary><p>如果你已在可信的查分工具中完成 TapTap 授权，可使用该工具提供的“导出 sessionToken”功能。也可从自己设备上的游戏账户文件提取，具体路径随系统而异。本工具不要求 TapTap 密码，也不提供公共代理。</p><p>sessionToken 是账户凭证，请只在你信任的网站使用，勿放进公开仓库或聊天截图。只有游戏内已上传的云存档才能在线查询。</p></details>
   </dialog>
