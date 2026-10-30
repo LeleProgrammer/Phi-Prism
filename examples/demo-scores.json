@@ -1,6 +1,6 @@
 {
   "schema": "phi-prism/1",
-  "exportedAt": "2026-10-29T23:03:06.357Z",
+  "exportedAt": "2026-10-30T04:28:04.870Z",
   "dataDate": "2026-10-21",
   "demo": true,
   "profile": {
@@ -12,7 +12,7 @@
     "challenge": 345,
     "gameVersion": "",
     "cloudRks": null,
-    "updatedAt": "2026-10-29T23:03:05.749Z",
+    "updatedAt": "2026-10-30T04:28:04.315Z",
     "money": null
   },
   "records": [

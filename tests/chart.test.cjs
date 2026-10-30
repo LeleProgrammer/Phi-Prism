@@ -8,3 +8,8 @@ const multi=E.compile({formatVersion:3,judgeLineList:[{bpm:120,speedEvents:[{sta
 assert.equal(E.floor(multi.lines[0],1),1.5);assert.equal(E.floor(multi.lines[0],2),3.5);assert.equal(E.floor(multi.lines[0],50),51.5);
 for(const t of [50,1,70,2,50])assert.equal(E.floor(multi.lines[0],t),t<1?t*1.5:t<2?1.5+(t-1)*2:3.5+(t-2));
 console.log('Multi-speed cumulative floor and arbitrary seek regression passed.');
+
+const hit=E.judgementEvents(c,1.05);assert.equal(hit.combo,1);assert.equal(hit.hits.length,1);assert.equal(E.judgementEvents(c,1.05,1.06).hits.length,0);assert.equal(E.judgementEvents(c,.5).combo,0);assert.equal(E.judgementEvents(c,2).hits.length,0);
+const hold=E.compile({formatVersion:3,judgeLineList:[{bpm:120,speedEvents:[],notesAbove:[{type:3,time:64,holdTime:128,positionX:0,speed:1,floorPosition:0}]}]});
+assert.equal(E.judgementEvents(hold,2).combo,1);assert(E.judgementEvents(hold,2).hits.length);assert(E.judgementEvents(hold,3.05).hits.length);assert.equal(E.judgementEvents(hold,3.5).hits.length,0);
+console.log('Auto judgement, hold pulses/tail, combo and seek suppression passed.');
