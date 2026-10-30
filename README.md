@@ -122,6 +122,7 @@ python tools/update_data.py
 已恢复全部 327 张曲绘，并拆为 25 个静态脚本，每个不超过 512 KiB。请完整上传 `index.html`、`assets/art.js`、`assets/art-data/`、`assets/app.js`；建议直接覆盖完整包。曲绘仍以 data URL 保存，兼容 GitHub Pages 子目录、本地双击和 Canvas 图片导出，不依赖外部图床。若分块漏传，页面底部会提示曲绘加载数量。
 
 曲绘完整性检查：`node tests/art.test.cjs`，检查 HTML 引用的所有 JavaScript 语法、327 张图片的二进制长度、分块大小与加载顺序。
+<<<<<<< HEAD
 
 ## 谱面练习
 
@@ -140,3 +141,5 @@ python tools/download_resources.py --types charts audio illustrations
 已存在且有效的文件跳过；--refresh 强制重新下载。download-report.json 包含 SHA256 和失败项。反复运行可补齐失败文件。离线谱面同时生成 JSON 和 JS，JS 供双击入口加载。
 
 章节使用当前曲库的 chapter 字段分组，章内沿用当前曲库曲序；章节移动/游戏版本差异需更新 charts-index.json/js 后校对，不宣称覆盖所有版本的特殊章节排序。当前播放器是官谱读谱演示，不含游戏专属剧情、特殊着色器和额外视频。
+=======
+>>>>>>> e7b0d0540288861575214042a86b9540309ee194
