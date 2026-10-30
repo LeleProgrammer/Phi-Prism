@@ -32,11 +32,13 @@
 
 通过你已使用的可信查分工具的“导出 sessionToken”功能，或你自己设备上的账户数据获取 token。本站不提供扫码登录，不需要 TapTap 密码，不要求把凭证交给站长。
 
-浏览器仅向 `https://rak3ffdi.cloud.tds1.tapapis.cn/1.1` 发送 sessionToken。读取玩家信息后，使用该玩家的 ID 查询 `/gamesaves/` 并选择最新存档。下载存档时**不携带** token，也不通过公共代理。
+浏览器仅向 `https://rak3ffdi.cloud.tds1.tapapis.cn/1.1` 发送 sessionToken。读取玩家信息后，使用该玩家的 ID 查询 `/gamesaves` 并选择最新存档。下载存档时**不携带** token，也不通过公共代理。
 
 默认只在当前会话使用 token；选中“记住 token”后才保存到此站点的 localStorage。清除按钮可移除已保存凭证。成绩 JSON、历史备份与图片均不包含 token。不要把 token 写入源码、公开仓库或截图。
 
 **跨域备用流程：**如果云存档下载域名不允许浏览器跨域读取，页面会显示“下载原始存档 ZIP”链接。手动下载后导入本站，即可继续使用全部本地统计和出图功能，不需要架设后端。网络、接口变更和浏览器策略可能影响在线读取；静态网站无法自行修改远端的跨域策略。
+
+连接修订版 **2026-10-24-r2**：读取失败时先点击“连接诊断（不使用 token）”，可下载不含真实凭证的报告。该诊断只向官方接口发送固定无效占位符，先通过预期的拒绝响应检查资料接口，再以固定不存在用户的筛选条件检查存档列表接口；它不验证真实 token，也不验证存档文件下载。错误会区分读取资料、查询存档、下载阶段，并标明离线、超时、HTTP、格式或网络错误。浏览器不支持 `AbortSignal.timeout()` 时也能请求，超时由兼容方式管理。网络错误的具体 DNS/TLS/CORS 原因受浏览器限制，可能还需查看 F12 → Console；请勿截图或分享请求头。
 
 当前已验证云存档接口的跨域预检、解析算法与模拟完整请求；交付时没有使用真实玩家的 sessionToken 做端到端账号同步。`tests/VERIFICATION.md` 记录具体验证范围。
 
@@ -86,7 +88,7 @@ ACC < 70：RKS = 0
 | `assets/core.js` | RKS、推分、二进制解析、云存档读取 |
 | `assets/export.js` | Canvas 成绩图排版 |
 | `assets/data.js` | 曲目信息与定数快照 |
-| `assets/art.js` | 内嵌曲绘；不要手工删除 |
+| `assets/art.js`、`assets/art-data/` | 曲绘初始化与分块数据；整个目录必须上传 |
 | `assets/vendor/` | 本地解压与加密依赖 |
 | `examples/` | 演示 JSON、人工构造的解析测试 ZIP、示例图片 |
 | `tools/update_data.py` | 可选的曲库更新工具 |
@@ -101,10 +103,40 @@ python -m pip install pillow
 python tools/update_data.py
 ```
 
-脚本从上游下载元数据与曲绘、生成新的 `assets/data.js` 和 `assets/art.js`，再把这两个文件更新到仓库即可。只更新元数据可使用 `--skip-art`。如果只需要临时使用新定数，网站说明弹窗支持导入曲库 JSON（只对当前会话生效）。
+脚本从上游下载元数据与曲绘、生成新的 `assets/data.js`、`assets/art.js` 和 `assets/art-data/` 分块脚本，再更新 `index.html`、这两个文件及完整的 `assets/art-data/` 目录即可。只更新元数据可使用 `--skip-art`。如果只需要临时使用新定数，网站说明弹窗支持导入曲库 JSON（只对当前会话生效）。
 
 ## 许可与来源
 
 本项目代码使用 GPL-3.0-or-later，详见 LICENSE。协议与结构参考 Catrong/phi-plugin；曲库及曲绘来自该项目及 phi-plugin-ill。fflate、CryptoJS 与 Barlow 字体保留各自许可。曲绘及游戏相关素材版权仍归原作者和权利人所有，不能据代码许可推定素材可自由商用。完整说明见 THIRD_PARTY_NOTICES.md。
 
 这是非官方工具，与 Pigeon Games、Phigros、TapTap 无隶属关系。
+
+额外网络回归验证：`node tests/network.test.cjs`。
+
+### 2026-10-24-r2：存档列表跨域重定向修复
+
+原地址 `/1.1/gamesaves/?…` 的 GET 返回 301，转向 `/1.1/gamesaves?…`，但中间重定向响应缺少 `Access-Control-Allow-Origin`。先前 OPTIONS 预检可通过，因而未发现这个问题。现已直接请求不带末尾斜杠的规范地址，并扩展连接诊断检查两个接口。更新部署后请按 Ctrl+F5，连接面板应显示 `2026-10-24-r2`。
+
+### 曲绘修复：2026-10-24
+
+已恢复全部 327 张曲绘，并拆为 25 个静态脚本，每个不超过 512 KiB。请完整上传 `index.html`、`assets/art.js`、`assets/art-data/`、`assets/app.js`；建议直接覆盖完整包。曲绘仍以 data URL 保存，兼容 GitHub Pages 子目录、本地双击和 Canvas 图片导出，不依赖外部图床。若分块漏传，页面底部会提示曲绘加载数量。
+
+曲绘完整性检查：`node tests/art.test.cjs`，检查 HTML 引用的所有 JavaScript 语法、327 张图片的二进制长度、分块大小与加载顺序。
+
+## 谱面练习
+
+从首页导航进入“谱面练习”，或打开 charts.html。无需登录。支持官方 JSON v1/v3、自动播放、暂停、拖动进度、0.25—2 倍速、保持音调、独立音符流速、A/B 循环、全屏、音量与背景设置。支持导入自己的 JSON 和音频。
+
+谱面和音频本地优先，缺失时从 7aGiven/Phigros_Resource 的 chart/music 分支加载。首次打开在线资源可能较慢。外部资源不可用时可用离线下载或文件导入。下载文件无需加入 Git；如需线上站使用本地资源，须主动将 offline 目录发布，否则 Pages 使用在线来源。
+
+下载器：Python 3.8+，无第三方依赖。
+
+```bash
+python tools/download_resources.py --song Glaciaxion --difficulty IN
+python tools/download_resources.py --chapter "Chapter 5" --difficulty IN AT
+python tools/download_resources.py --types charts audio illustrations
+```
+
+已存在且有效的文件跳过；--refresh 强制重新下载。download-report.json 包含 SHA256 和失败项。反复运行可补齐失败文件。离线谱面同时生成 JSON 和 JS，JS 供双击入口加载。
+
+章节使用当前曲库的 chapter 字段分组，章内沿用当前曲库曲序；章节移动/游戏版本差异需更新 charts-index.json/js 后校对，不宣称覆盖所有版本的特殊章节排序。当前播放器是官谱读谱演示，不含游戏专属剧情、特殊着色器和额外视频。

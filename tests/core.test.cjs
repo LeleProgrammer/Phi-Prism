@@ -4,7 +4,7 @@ const vm = require('node:vm');
 const path = require('node:path');
 const root = path.resolve(__dirname, '..');
 // Production files are unmodified, executed in a browser-like global scope.
-const sandbox = {console, TextDecoder, Uint8Array, ArrayBuffer, DataView, Date, URL, URLSearchParams, AbortSignal, atob};
+const sandbox = {console, TextDecoder, Uint8Array, ArrayBuffer, DataView, Date, URL, URLSearchParams, AbortController, AbortSignal, setTimeout, clearTimeout, atob};
 sandbox.window = sandbox;
 vm.createContext(sandbox);
 for (const file of ['assets/vendor/crypto-js.js', 'assets/vendor/fflate.js', 'assets/data.js', 'assets/core.js']) vm.runInContext(fs.readFileSync(path.join(root,file),'utf8'), sandbox);
@@ -60,5 +60,5 @@ assert.throws(()=>P.parseZip(F.zipSync({gameRecord:new Uint8Array([7,1,2])})),/ç
 assert.throws(()=>P.parseZip(F.zipSync({other:new Uint8Array([1,2,3])})),/gameRecord/);
 // Restrict every cloud credential request to the known game origin; file fetch has no session headers.
 let calls=[];
-sandbox.fetch=async (url,opts)=>{calls.push({url:String(url),opts});if(String(url).endsWith('/users/me'))return {ok:true,json:async()=>({objectId:'fixture-player',nickname:'Fixture'})};if(String(url).includes('/gamesaves/'))return {ok:true,json:async()=>({results:[{gameFile:{url:'https://files.example.test/save'},updatedAt:'2026-10-21T00:00:00Z'}]})};return {ok:true,blob:async()=>({size:zip.length,arrayBuffer:async()=>zip.buffer.slice(zip.byteOffset,zip.byteOffset+zip.byteLength)})};};
+sandbox.fetch=async (url,opts)=>{calls.push({url:String(url),opts});if(String(url).endsWith('/users/me'))return {ok:true,json:async()=>({objectId:'fixture-player',nickname:'Fixture'})};if(String(url).includes('/gamesaves?'))return {ok:true,json:async()=>({results:[{gameFile:{url:'https://files.example.test/save'},updatedAt:'2026-10-21T00:00:00Z'}]})};return {ok:true,blob:async()=>({size:zip.length,arrayBuffer:async()=>zip.buffer.slice(zip.byteOffset,zip.byteOffset+zip.byteLength)})};};
 (async()=>{const cloud=await P.cloud('a'.repeat(25));assert.equal(cloud.profile.name,'Fixture');assert.equal(calls.length,3);assert.ok(calls.slice(0,2).every(x=>x.url.startsWith('https://rak3ffdi.cloud.tds1.tapapis.cn/1.1/')));assert.ok(calls[0].opts.headers['X-LC-Session']);assert.equal(calls[2].opts.headers,undefined);assert.equal(calls[2].opts.credentials,'omit');fs.mkdirSync(path.join(root,'examples'),{recursive:true});fs.writeFileSync(path.join(root,'examples','demo-scores.json'),JSON.stringify(portable,null,2));fs.writeFileSync(path.join(root,'examples','test-save.zip'),Buffer.from(zip));console.log(JSON.stringify({passed:true,records:demo.records.length,projectionComparisons:tested,validatedSuggestions:proposed,binaryRecords:parsed.records.length,cloudRequests:calls.length}));})().catch(e=>{console.error(e);process.exitCode=1;});

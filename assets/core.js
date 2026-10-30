@@ -176,23 +176,89 @@
     return normalize({profile: p, records});
   }
   const BASE = 'https://rak3ffdi.cloud.tds1.tapapis.cn/1.1';
+  function connectionError(code, stage, detail) {
+    const error = Error(`${stage}失败：${detail}`);
+    error.code = code; error.stage = stage; return error;
+  }
+  function safeNetworkDetail(error, token) {
+    return `${error?.name || 'Error'}: ${error?.message || '请求未完成'}`.split(token).join('[已隐藏]').replace(/[a-zA-Z0-9]{25,}/g, '[已隐藏]').slice(0, 180);
+  }
+  async function cloudRequest(path, token, stage, timeout = 45000, file = false) {
+    if (typeof fetch !== 'function') throw connectionError('UNSUPPORTED', stage, '当前浏览器不支持 Fetch，请使用新版 Chrome、Edge、Firefox 或 Safari。');
+    if (root.navigator?.onLine === false) throw connectionError('OFFLINE', stage, '浏览器处于离线状态，请联网后重试。');
+    // Avoid AbortSignal.timeout(), which is absent in older browsers and WebViews.
+    const controller = typeof AbortController === 'function' ? new AbortController() : null;
+    let timer;
+    try {
+      const request = (async () => {
+        let response;
+        try {
+          response = await fetch(file ? path : BASE + path, {
+            ...(file ? {} : {headers: {'X-LC-Id': 'rAK3FfdieFob2Nn8Am', 'X-LC-Key': 'Qr9AEqtuoSVS3zeD6iVbM4ZC0AtkJcQ89tywVyi0', 'X-LC-Session': token}}),
+            mode: 'cors', credentials: 'omit', cache: 'no-store', referrerPolicy: 'no-referrer',
+            ...(controller ? {signal: controller.signal} : {})
+          });
+        } catch (error) {
+          throw connectionError('NETWORK', stage, `浏览器未能读取响应（${safeNetworkDetail(error, token)}）。网络、跨域策略或浏览器扩展都可能导致此错误；请点击“连接诊断”。`);
+        }
+        if (file) {
+          if (!response.ok) throw connectionError('HTTP', stage, `HTTP ${response.status}。可手动下载下方 ZIP 后导入。`);
+          return response.blob();
+        }
+        let json;
+        try { json = await response.json(); }
+        catch { throw connectionError('RESPONSE', stage, `HTTP ${response.status} 返回的内容不是有效 JSON，可能是网络登录页或接口异常。`); }
+        if (!json || typeof json !== 'object' || Array.isArray(json)) throw connectionError('RESPONSE', stage, '接口返回格式不正确。');
+        if (!response.ok || json.error && json.code) {
+          if (response.status === 401 || json.code === 209 || json.code === 211) throw connectionError('AUTH', stage, `sessionToken 无效或已失效（HTTP ${response.status}，接口代码 ${json.code ?? '未提供'}），请重新获取。`);
+          throw connectionError('HTTP', stage, `HTTP ${response.status}，接口代码 ${json.code ?? '未提供'}。`);
+        }
+        return json;
+      })();
+      const deadline = new Promise((_, reject) => { timer = setTimeout(() => {
+        reject(connectionError('TIMEOUT', stage, `${Math.round(timeout / 1000)} 秒内未完成请求。请点击“连接诊断”，检查当前网络能否访问游戏云存档接口。`));
+        controller?.abort();
+      }, timeout); });
+      return await Promise.race([request, deadline]);
+    } finally { clearTimeout(timer); }
+  }
+  async function diagnoseCloud() {
+    const start = Date.now();
+    const report = {version: '2026-10-24-r2', protocol: root.location?.protocol || 'unknown', secureContext: root.isSecureContext === true,
+      online: root.navigator?.onLine !== false, browser: String(root.navigator?.userAgent || 'unknown').slice(0, 240),
+      fetch: typeof fetch === 'function', abortController: typeof AbortController === 'function',
+      nativeTimeout: typeof AbortSignal !== 'undefined' && typeof AbortSignal.timeout === 'function'};
+    // Deliberately invalid fixture; never read the token input or stored credentials.
+    try {
+      await cloudRequest('/users/me', '0000000000000000000000000', '接口连通性检测', 15000);
+      report.result = '接口响应可读取，但测试占位符意外通过认证；请勿据此判断真实账号。'; report.code = 'UNEXPECTED';
+    } catch (error) {
+      report.code = error.code || 'UNKNOWN';
+      report.result = error.code === 'AUTH' ? '连接正常：浏览器已读到接口对测试占位符的拒绝响应。此结果不验证你的 sessionToken 或存档下载。' : error.message;
+    }
+    if (report.code === 'AUTH') {
+      // Filter by a fixed, nonexistent fixture user. Never query an unfiltered list.
+      const params = new URLSearchParams({skip: '0', limit: '1', where: JSON.stringify({user: {__type: 'Pointer', className: '_User', objectId: 'phi-prism-connectivity-fixture'}}), include: 'cover,gameFile'});
+      try {
+        const result = await cloudRequest('/gamesaves?' + params, '0000000000000000000000000', '存档列表连通性检测', 15000);
+        report.code = Array.isArray(result.results) ? 'OK' : 'RESPONSE';
+        report.result = report.code === 'OK' ? '资料接口与存档列表接口均可访问；不验证真实 token 或存档文件下载。' : '存档列表接口可读取，但返回格式不正确。';
+      } catch (error) {
+        report.code = error.code === 'AUTH' ? 'OK' : error.code || 'UNKNOWN';
+        report.result = error.code === 'AUTH' ? '资料接口与存档列表接口均可读取测试占位符的拒绝响应；不验证真实 token 或存档文件下载。' : error.message;
+      }
+    }
+    report.elapsedMs = Date.now() - start; return report;
+  }
   async function cloud(token, onStage = () => {}, onFile = () => {}) {
     if (!/^[a-zA-Z0-9]{25}$/.test(token)) throw Error('sessionToken 应为 25 位英文字母或数字。');
-    const headers = {'X-LC-Id': 'rAK3FfdieFob2Nn8Am', 'X-LC-Key': 'Qr9AEqtuoSVS3zeD6iVbM4ZC0AtkJcQ89tywVyi0', 'X-LC-Session': token};
-    async function read(path) {
-      let r;
-      try { r = await fetch(BASE + path, {headers, mode: 'cors', credentials: 'omit', cache: 'no-store', referrerPolicy: 'no-referrer', signal: AbortSignal.timeout(25000)}); }
-      catch { throw Error('无法连接云存档接口，请检查网络；也可以导入本地存档或成绩 JSON。'); }
-      const j = await r.json();
-      if (!r.ok) throw Error(r.status === 401 || j.code === 211 ? 'sessionToken 无效或已失效，请重新获取。' : `云存档接口返回 ${r.status}（${String(j.error || '请求失败').slice(0, 120)}）。`);
-      return j;
-    }
     onStage('正在读取玩家资料…');
-    const user = await read('/users/me');
+    const user = await cloudRequest('/users/me', token, '读取玩家资料');
     if (!user.objectId) throw Error('云存档接口未返回玩家 ID。');
     onStage('正在查询最新云存档…');
     const params = new URLSearchParams({skip: '0', limit: '100', where: JSON.stringify({user: {__type: 'Pointer', className: '_User', objectId: user.objectId}}), include: 'cover,gameFile'});
-    const j = await read('/gamesaves/?' + params);
+    // The slash-suffixed route returns a 301 without CORS headers.
+    const j = await cloudRequest('/gamesaves?' + params, token, '查询云存档');
     const saves = (j.results || []).filter(s => s.gameFile?.url).sort((a, b) => +new Date(b.modifiedAt?.iso || b.updatedAt) - +new Date(a.modifiedAt?.iso || a.updatedAt));
     if (!saves.length) throw Error('此账号没有云存档，请先在游戏内上传存档。');
     const s = saves[0], url = new URL(s.gameFile.url);
@@ -200,11 +266,9 @@
     // Never attach the session header to the storage/CDN request.
     onFile(url.href);
     onStage('正在下载并解密存档…');
-    let file;
-    try { file = await fetch(url.href, {mode: 'cors', credentials: 'omit', referrerPolicy: 'no-referrer', signal: AbortSignal.timeout(30000)}); }
-    catch { throw Error('存档下载被网络或跨域策略阻止。请使用下方“下载原始存档”链接保存 ZIP，再导入本站；无需部署后端。'); }
-    if (!file.ok) throw Error(`存档下载失败（HTTP ${file.status}）。`);
-    const blob = await file.blob();
+    let blob;
+    try { blob = await cloudRequest(url.href, token, '下载存档', 60000, true); }
+    catch (error) { error.message += ' 也可点击下方“下载原始存档 ZIP”，保存后导入本站。'; throw error; }
     if (blob.size > 12 * 1024 * 1024) throw Error('存档文件超过 12 MB。');
     let summary = {};
     if (s.summary) { try { summary = parseSummary(s.summary); } catch { /* record parser remains authoritative */ } }
@@ -225,6 +289,6 @@
     }
     return normalize({demo: true, profile: {name: 'PRISM / 演示玩家', account: '__demo__', intro: '每一道判定线，都是新的可能。', challenge: 345, updatedAt: new Date().toISOString()}, records});
   }
-  root.Phi = {LEVELS, songs, key, strip, rating, grade, gradeLabel, normalize, board, context, projection, suggest, stats, portable, Reader, decrypt, parseSummary, parseZip, cloud, demo};
+  root.Phi = {LEVELS, songs, key, strip, rating, grade, gradeLabel, normalize, board, context, projection, suggest, stats, portable, Reader, decrypt, parseSummary, parseZip, cloud, diagnoseCloud, demo};
   if (typeof module !== 'undefined') module.exports = root.Phi;
 })(typeof window !== 'undefined' ? window : globalThis);

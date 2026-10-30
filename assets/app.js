@@ -30,6 +30,10 @@
     if(save.unknown)toast(`${save.unknown} 条成绩缺少定数，已保留但不参与 RKS；可导入新版曲库。`);
   }
   function art(id){return window.PHI_ART?.[id]||'';}
+  function artworkNote(){
+    const total=PHI_DATA.songs.length,loaded=PHI_DATA.songs.filter(s=>art(s.id)).length;
+    return loaded<total?` · 曲绘未完整加载（${loaded}/${total}），请上传完整 assets 目录后强制刷新`:'';
+  }
   function updateProfile(){
     const save=S.save,stat=P.stats(save),b=P.board(save,30),top=b.phi[0]||b.best[0];
     const cover=top?art(top.id):'';
@@ -44,7 +48,7 @@
     $('#connectText').textContent=save.demo?'连接真实存档':'管理存档';
     const meta=[['已玩谱面',stat.played,` / ${stat.total}`,'PLAYED','按当前曲库统计'],['FULL COMBO',stat.fc,'','V','包含所有 φ 成绩'],['ALL PERFECT',stat.phi,'','PHI','100 万分 · 100% ACC'],['B30 平均 ACC',(b.best.length?b.best.reduce((s,x)=>s+x.acc,0)/b.best.length:0).toFixed(2),'%','ACCURACY','Best 27 中已有成绩的均值']];
     $('#metrics').innerHTML=meta.map(([label,value,unit,code,note],i)=>`<div class="metric"><div class="metric-label">${esc(label)}<i class="${i===1?'full-combo':''}">${code}</i></div><strong class="${i===2?'gold':''}">${value}<span>${unit}</span></strong><p>${note}</p></div>`).join('');
-    $('#dataNote').textContent=`曲库快照 ${PHI_DATA.date} · ${P.songs.size} 首曲目 · ${save.unknown?'部分未知定数未参与计算 · ':''}统计与图片在浏览器内生成${save.demo?' · 当前为演示数据':''}`;
+    $('#dataNote').textContent=`曲库快照 ${PHI_DATA.date} · ${P.songs.size} 首曲目 · ${save.unknown?'部分未知定数未参与计算 · ':''}统计与图片在浏览器内生成${save.demo?' · 当前为演示数据':''}${artworkNote()}`;
   }
   function badge(r){return `<span class="level lv-${r.level}">${r.level}<small>${r.constant?.toFixed(1)||'?'}</small></span>`;}
   function card(r,i,{phi=false,overflow=false,hint=null}={}){
@@ -122,13 +126,27 @@
   }
   async function connect(e){
     e.preventDefault();const t=$('#token').value.trim();if(!/^[a-zA-Z0-9]{25}$/.test(t)){toast('请输入 25 位 sessionToken。');return;}
-    $('#submitConnect').disabled=true;$('#connectStatus').classList.remove('error');$('#downloadFallback').hidden=true;
+    $('#submitConnect').disabled=true;$('#diagnoseBtn').disabled=true;$('#connectStatus').classList.remove('error');$('#downloadFallback').hidden=true;
     try{
       const save=await P.cloud(t,s=>$('#connectStatus').textContent=s,url=>{$('#saveDownload').href=url;$('#downloadFallback').hidden=false;});
       tokenMemory=t;if($('#rememberToken').checked)writeStore(LS.token,t);else removeStore(LS.token);
       setSave(save,{source:'云存档'});$('#connectDialog').close();toast('云存档已读取，成绩与统计已更新。');
-    }catch(err){$('#connectStatus').textContent=err.message;$('#connectStatus').classList.add('error');}
-    finally{$('#submitConnect').disabled=false;}
+    }catch(err){$('#connectStatus').textContent=(err.code?'['+err.code+'] ':'')+err.message;$('#connectStatus').classList.add('error');}
+    finally{$('#submitConnect').disabled=false;$('#diagnoseBtn').disabled=false;}
+  }
+  let connectionReport=null;
+  async function diagnoseConnection(){
+    $('#diagnoseBtn').disabled=true;$('#submitConnect').disabled=true;$('#saveDiagnosis').hidden=true;$('#diagnoseResult').hidden=false;
+    $('#diagnoseResult').textContent='正在检测浏览器与官方接口的连接，不读取输入框或已保存的 token…';
+    try{
+      const r=await P.diagnoseCloud();
+      connectionReport=['Phi Prism 连接诊断 '+r.version,'结果 ['+r.code+']：'+r.result,'打开方式：'+r.protocol,'浏览器：'+r.browser,
+        '联网状态：'+r.online,'安全上下文：'+r.secureContext,'Fetch：'+r.fetch,'AbortController：'+r.abortController,'原生超时 API：'+r.nativeTimeout,
+        '耗时：'+r.elapsedMs+' ms','本报告不包含你的 sessionToken、玩家资料或成绩。',
+        r.code==='NETWORK'?'浏览器未提供具体网络原因。请按 F12 → Console，点击“连接诊断”后查看红色错误；只截错误文字，勿截请求头。':''].filter(Boolean).join('\n');
+      $('#diagnoseResult').textContent=connectionReport;$('#saveDiagnosis').hidden=false;
+    }catch{connectionReport=null;$('#diagnoseResult').textContent='诊断未能完成，请在新版浏览器中打开后重试。';}
+    finally{$('#diagnoseBtn').disabled=false;$('#submitConnect').disabled=false;}
   }
   function downloadBlob(blob,name){const url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),30000);}
   function downloadJSON(obj,name){downloadBlob(new Blob([JSON.stringify(obj,null,2)],{type:'application/json'}),name);}
@@ -174,6 +192,8 @@
     $('#helpDialog').showModal();
   }
   $('#connectForm').addEventListener('submit',connect);
+  $('#diagnoseBtn').onclick=diagnoseConnection;
+  $('#saveDiagnosis').onclick=()=>connectionReport&&downloadBlob(new Blob([connectionReport],{type:'text/plain;charset=utf-8'}),'phi-prism-connection.txt');
   for(const id of ['connectBtn','startConnect'])$('#'+id).onclick=openConnect;
   for(const id of ['startImport','importBtn','dialogImport','fallbackImport'])$('#'+id).onclick=()=>$('#importFile').click();
   $('#syncBtn').onclick=()=>{openConnect();if(tokenMemory||readStore(LS.token,''))$('#connectForm').requestSubmit();};
@@ -231,7 +251,7 @@
   window.addEventListener('drop',e=>{e.preventDefault();dragCount=0;document.body.classList.remove('drop-active');importFile(e.dataTransfer?.files[0]);});
   document.addEventListener('keydown',e=>{if(e.key==='/'&&!e.ctrlKey&&!e.metaKey&&!/INPUT|TEXTAREA|SELECT/.test(e.target.tagName)&&!document.querySelector('dialog[open]')&&S.save){e.preventDefault();S.view='library';render();$('#songSearch').focus();}});
   const cached=readStore(LS.cache);if(cached){try{setSave(P.normalize(cached),{snapshot:false,source:'缓存'});}catch{removeStore(LS.cache);}}
-  if(!S.save){const hero=[...P.songs.values()].find(s=>s.title==='Rrhar’il')||[...P.songs.values()].find(s=>s.title.includes('Distorted Fate'))||[...P.songs.values()].at(-1);if(hero)$('#hero').style.backgroundImage=`url("${art(hero.id)}")`;$('#dataNote').textContent=`曲库快照 ${PHI_DATA.date} · ${P.songs.size} 首曲目 · 素材已内置，可离线出图`;}
+  if(!S.save){const hero=[...P.songs.values()].find(s=>s.title==='Rrhar’il')||[...P.songs.values()].find(s=>s.title.includes('Distorted Fate'))||[...P.songs.values()].at(-1);if(hero)$('#hero').style.backgroundImage=`url("${art(hero.id)}")`;$('#dataNote').textContent=`曲库快照 ${PHI_DATA.date} · ${P.songs.size} 首曲目 · 素材已内置，可离线出图${artworkNote()}`;}
   // Expose state only for local diagnostics; it never contains persisted token fields.
   window.PhiPrism={getSave:()=>S.save,getView:()=>S.view};
 })();
