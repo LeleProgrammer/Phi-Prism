@@ -123,9 +123,9 @@ python tools/update_data.py
 
 曲绘完整性检查：`node tests/art.test.cjs`，检查 HTML 引用的所有 JavaScript 语法、327 张图片的二进制长度、分块大小与加载顺序。
 
-## 谱面练习
+## 谱面查询
 
-从首页导航进入“谱面练习”，或打开 charts.html。无需登录。支持官方 JSON v1/v3、自动播放、暂停、拖动进度、0.25—2 倍速、保持音调、独立音符流速、A/B 循环、全屏、音量与背景设置。支持导入自己的 JSON 和音频。
+从首页导航进入“谱面查询”，或打开 charts.html。无需登录。支持官方 JSON v1/v3、自动播放、暂停、拖动进度、0.25—2 倍速、保持音调、独立音符流速、A/B 循环、全屏、音量与背景设置。支持导入自己的 JSON 和音频。
 
 谱面和音频本地优先，缺失时从 7aGiven/Phigros_Resource 的 chart/music 分支加载。首次打开在线资源可能较慢。外部资源不可用时可用离线下载或文件导入。下载文件无需加入 Git；如需线上站使用本地资源，须主动将 offline 目录发布，否则 Pages 使用在线来源。
 
@@ -140,3 +140,10 @@ python tools/download_resources.py --types charts audio illustrations
 已存在且有效的文件跳过；--refresh 强制重新下载。download-report.json 包含 SHA256 和失败项。反复运行可补齐失败文件。离线谱面同时生成 JSON 和 JS，JS 供双击入口加载。
 
 章节使用当前曲库的 chapter 字段分组，章内沿用当前曲库曲序；章节移动/游戏版本差异需更新 charts-index.json/js 后校对，不宣称覆盖所有版本的特殊章节排序。当前播放器是官谱读谱演示，不含游戏专属剧情、特殊着色器和额外视频。
+
+## 2026-10-30 修复
+
+- 速度事件的 floorPosition 在新版官谱中已移除；现按秒累计积分重建每段位移，避免后半段音符跑到视野外。
+- 更名“谱面查询”；曲目列表显示内置曲绘。
+- 支持官谱根字段 blockAreaList 的时间、矩形、移动、缩放、旋转、锚点、缓动和反向区域，提供“显示噪域”开关。噪域几何依据原始数据，Canvas 红色噪点为近似效果；未重现原游戏完整着色器、触摸失效与音频滤波。播放器为自动读谱展示，没有触摸判定。
+- 几何/缓动语义交叉核对： https://github.com/TeamFlos/phira/pull/901 。
